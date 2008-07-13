@@ -1,0 +1,19 @@
+/*
+    Information on customizing the Django admin CSS:
+    http://www.djangoproject.com/documentation/admin_css/
+*/
+#header
+{
+    color: #F0C132;
+    background: #063C56;
+}
+#header h1
+{
+    padding-left: 0;
+    margin-left: 15px;
+}
+.module h2, .module caption
+{
+	/* Replace section header gradient if you want. */
+    /* background: #7CA0C7 url(img/default-bg.gif) repeat-x scroll left top; */
+}

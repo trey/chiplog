@@ -1,0 +1,15 @@
+{% extends "admin/base.html" %}
+{% load i18n %}
+
+{% block extrastyle %}<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}admin/css/base.css" />{% endblock %}
+{% block title %}{{ title }} | {% trans 'Logbook admin' %}{% endblock %}
+
+{% block branding %}
+<h1 id="site-name">
+	{% trans 'Logbook administration' %}
+	{# Put your logo in the header if you want: #}
+	{# <img src="{{ MEDIA_URL }}admin/img/sitening_white.png" /> #}
+</h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
