@@ -11,11 +11,6 @@ class Entry(models.Model):
     updated = models.DateTimeField(auto_now=True)
     tags    = TagField()
 
-    class Admin:
-        list_display = ('body', 'created', 'updated')
-        list_filter   = ('created', 'updated')
-        search_fields = ('body')
-
     class Meta:
         verbose_name_plural = 'entries'
 
