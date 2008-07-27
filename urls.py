@@ -8,6 +8,7 @@ urlpatterns = patterns('',
     # Example:
     # (r'^logbook_django/', include('logbook_django.foo.urls')),
 
+    (r'^admin/doc/', include('django.contrib.admindocs.urls')),
     (r'^admin/(.*)', admin.site.root),
 )
 
