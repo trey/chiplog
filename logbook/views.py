@@ -12,6 +12,8 @@ def add_entry(request):
         if form.is_valid():
             form.save()
             return HttpResponseRedirect('/')
+        else:
+            return HttpResponseRedirect('/bad')
     else:
         form = LogForm(instance=entry)
     return render_to_response('log_home.html', {'form': form})
