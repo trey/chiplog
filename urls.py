@@ -1,12 +1,11 @@
 from django.conf import settings
 from django.conf.urls.defaults import *
 from django.contrib import admin
-from logbook.views import log_home
 
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    (r'^$', log_home),
+    (r'^$', 'logbook.views.add_entry'),
 
     (r'^admin/doc/', include('django.contrib.admindocs.urls')),
     (r'^admin/(.*)', admin.site.root),
