@@ -3,17 +3,18 @@ from django.core.urlresolvers import reverse
 from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
 from logbook.forms import LogForm
-from logbook.models import Entry
 
 def add_entry(request):
-    entry = Entry()
-    if request.POST == 'POST':
-        form = LogForm(data=request.POST, instance=entry)
+    """
+    Add new entries and view archive of entries.
+    """
+    if request.POST:
+        form = LogForm(data=request.POST)
         if form.is_valid():
             form.save()
             return HttpResponseRedirect('/')
         else:
-            return HttpResponseRedirect('/bad')
+            return HttpResponseRedirect('/')
     else:
-        form = LogForm(instance=entry)
+        form = LogForm()
     return render_to_response('log_home.html', {'form': form})
