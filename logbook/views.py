@@ -13,8 +13,8 @@ def add_entry(request):
         if form.is_valid():
             form.save()
             return HttpResponseRedirect('/')
-        else:
-            return HttpResponseRedirect('/')
+        # else:
+            # Errors and validation message taken care of for you.  Neat.
     else:
         form = LogForm()
     return render_to_response('log_home.html', {'form': form})
