@@ -4,6 +4,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
 from logbook.forms import LogForm
 
+@permission_required('logbook.add_entry')
 def add_entry(request):
     """
     Add new entries and view archive of entries.
