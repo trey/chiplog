@@ -1,4 +1,4 @@
-# Django settings for logbook_django project.
+# Django settings for Chiplog project.
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -35,7 +35,7 @@ USE_I18N = True
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = '/Users/trey/Sites/Personal/Django/logbook_proj/static/'
+MEDIA_ROOT = '/Users/trey/Sites/Personal/Django/chiplog_proj/static/'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
@@ -64,14 +64,14 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.doc.XViewMiddleware',
 )
 
-ROOT_URLCONF = 'logbook_proj.urls'
+ROOT_URLCONF = 'chiplog_proj.urls'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    '/Users/trey/Sites/Personal/Django/logbook_proj/templates',
-    '/Users/trey/Sites/Personal/Django/logbook_proj/chiplog/templates'
+    '/Users/trey/Sites/Personal/Django/chiplog_proj/templates',
+    '/Users/trey/Sites/Personal/Django/chiplog_proj/chiplog/templates'
 )
 
 INSTALLED_APPS = (
