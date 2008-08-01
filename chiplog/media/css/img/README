@@ -1,0 +1,2 @@
+Use this folder and its sub-folders for all CSS-controlled background images.
+The base site.tld/img/ folder should only be used for images that are inside <img> tags.

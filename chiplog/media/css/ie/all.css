@@ -1,0 +1,9 @@
+/* "Has Layout"
+----------------*/
+#main,
+#primary,
+#secondary,
+.primary,
+.secondary,
+.floatclear
+{ height: 1%; }

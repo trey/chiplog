@@ -1,0 +1,40 @@
+/* ---------- base/copy.sass ----------
+
+// Basic re-styling (after resetting) of items you probably want in your page copy (as opposed to the page layout).
+// Rename #primary to whatever div contains your page copy, or enter multiple (#primary, #secondary).
+
+#primary
+  p, ul, ol
+    :margin 10px 0
+
+  p
+    :line-height 1.4em
+
+    code
+      :padding 0 2px
+      :background #ccc
+
+  li
+    :margin-left 20px
+
+  ul li
+    :list-style disc
+
+  ol li
+    :list-style decimal
+
+  blockquote
+    :padding-left 15px
+    :border-left 2px solid #ccc
+    :color #666
+
+  pre
+    :color #777
+    :font-size 11px
+    :line-height 1.4em
+    :background-color #191919
+    :margin 18px 0 18px 0
+    :padding 10px
+    :overflow auto
+    :-moz-border-radius 5px
+    :-webkit-border-radius 5px

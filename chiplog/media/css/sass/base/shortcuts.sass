@@ -1,0 +1,22 @@
+/* ---------- base/shortcuts.sass ----------
+
+.center
+  :text-align center
+
+.right
+  :float right
+
+.left
+  :float left
+
+.clear
+  :clear both
+
+// This is a Mixin.  More info: http://haml.hamptoncatlin.com/docs/rdoc/classes/Sass.html
+=clearfix
+  &:after
+    content: "."
+    display: block
+    height: 0
+    clear: both
+    visibility: hidden
