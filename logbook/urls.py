@@ -5,9 +5,10 @@ from models import Entry
 
 logbook_list = {
     'queryset': Entry.objects.all(),
+    'template_name': 'log_list.html',
 }
 
 urlpatterns = patterns('',
-    (r'^new/$', add_entry),
     (r'^$', list_detail.object_list, logbook_list),
+    (r'^new/$', add_entry),
 )
