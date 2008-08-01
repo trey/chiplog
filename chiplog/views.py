@@ -12,7 +12,7 @@ def add_entry(request):
         form = LogForm(data=request.POST)
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect('/logbook')
+            return HttpResponseRedirect('/chiplog/')
         # else:
             # Errors and validation message taken care of for you.  Neat.
     else:
