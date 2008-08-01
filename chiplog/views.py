@@ -1,7 +1,7 @@
 from django.contrib.auth.decorators import permission_required
 from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
-from logbook.forms import LogForm
+from forms import LogForm
 
 @permission_required('logbook.add_entry')
 def add_entry(request):

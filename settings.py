@@ -71,11 +71,11 @@ TEMPLATE_DIRS = (
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
     '/Users/trey/Sites/Personal/Django/logbook_proj/templates',
-    '/Users/trey/Sites/Personal/Django/logbook_proj/logbook/templates'
+    '/Users/trey/Sites/Personal/Django/logbook_proj/chiplog/templates'
 )
 
 INSTALLED_APPS = (
-    'logbook',
+    'chiplog',
     'tagging',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -86,4 +86,4 @@ INSTALLED_APPS = (
 
 FORCE_LOWERCASE_TAGS = True
 
-SESSION_COOKIE_NAME = 'logbook'
+SESSION_COOKIE_NAME = 'chiplog'

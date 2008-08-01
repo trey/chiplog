@@ -1,5 +1,5 @@
 from django.contrib import admin
-from logbook.models import Entry
+from models import Entry
 
 class EntryAdmin(admin.ModelAdmin):
     list_display = ('body', 'created', 'tags')

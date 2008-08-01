@@ -4,7 +4,7 @@ import tagging
 
 class Entry(models.Model):
     """
-    A Logbook Entry
+    A Chiplog Entry
     """
     body    = models.TextField()
     created = models.DateTimeField(auto_now_add=True)
