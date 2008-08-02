@@ -1,4 +1,8 @@
-<form action="." method="post">
-	<div><label>Are you sure?</label><input class="button" type="submit" value="Delete Entry"></div>
-	<div class="content">{{ object.body }}</div>
-</form>
+{% extends 'base.html' %}
+
+{% block content %}	
+	<form action="." method="post">
+		<div><label>Are you sure?</label><input class="button" type="submit" value="Delete Entry"></div>
+		<div class="content">{{ object.body }}</div>
+	</form>
+{% endblock %}
