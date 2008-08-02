@@ -13,6 +13,7 @@ class Entry(models.Model):
 
     class Meta:
         verbose_name_plural = 'entries'
+        ordering = ['-created']
 
     def __unicode__(self):
         return self.body
