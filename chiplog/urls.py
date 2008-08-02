@@ -1,14 +1,21 @@
 from django.conf.urls.defaults import *
-from django.views.generic import list_detail
-from views import *
+from django.views.generic import create_update
 from models import Entry
 
-logbook_list = {
-    'queryset': Entry.objects.all(),
-    'template_name': 'log_list.html',
+chiplog_delete = {
+    'model': Entry,
+    'template_name': 'delete.html',
+    'post_delete_redirect': '/chiplog/',
+}
+chiplog_save = {
+    'model': Entry,
+    'template_name': 'list_edit.html',
+    'extra_context': { 'entry_list': Entry.objects.all },
+    'post_save_redirect': '/chiplog/',
 }
 
 urlpatterns = patterns('',
-    (r'^$', list_detail.object_list, logbook_list),
-    (r'^new/$', add_entry),
+    (r'^$', create_update.create_object, chiplog_save),
+    (r'^edit/(?P<object_id>\d+)/$', create_update.update_object, chiplog_save),
+    (r'^delete/(?P<object_id>\d+)/$', create_update.delete_object, chiplog_delete)
 )

@@ -1,0 +1,12 @@
+<form action="." method="post">
+	<table border="0">
+		{{ form.as_table }}
+	</table>
+	<div><input class="button" type="submit" value="Log It"></div>
+</form>
+
+<ul id="all_list">
+{% for entry in entry_list %}
+	<li><span class="delete"><a href="/chiplog/delete/{{ entry.id }}/">X</a></span> <span class="date">{{ entry.created|date:"M d, Y" }}</span> <a href="/chiplog/edit/{{ entry.id }}/">{{ entry.body }}</a></li>
+{% endfor %}
+</ul>

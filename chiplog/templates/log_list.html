@@ -1,5 +1,6 @@
+<!-- Delete this page. -->
 <ul id="all_list">
 {% for entry in object_list %}
-	<li><span class="date">{{ entry.created|date:"M d, Y" }}</span> <a href="#{# commentary.get_absolute_url #}">{{ entry.body }}</a></li>
+	<li><span class="date">{{ entry.created|date:"M d, Y" }}</span> <a href="edit/{{ entry.id }}/">{{ entry.body }}</a></li>
 {% endfor %}
 </ul>
