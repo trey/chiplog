@@ -121,6 +121,7 @@ body {
   clear: both;
   visibility: hidden; }
 
+/* ---------- site/forms.sass ---------- */
 form input[type=search] {
   float: right;
   width: 200px;
