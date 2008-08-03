@@ -97,7 +97,22 @@ table {
 /* ---------- site/main.sass ---------- */
 body {
   font: 14px "Gill Sans", Helvetica, sans-serif;
-  padding-bottom: 40px; }
+  padding-bottom: 40px;
+  background: #222222; }
+
+#wrapper {
+  width: 680px;
+  margin: 30px auto;
+  background: #E8E8E8;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px; }
+
+#header {
+  background: #878787;
+  -moz-border-radius-topright: 10px;
+  -moz-border-radius-topleft: 10px;
+  -webkit-border-top-left-radius: 10px;
+  -webkit-border-top-right-radius: 10px; }
 
 #main:after, #primary:after, #secondary:after, .primary:after, .secondary:after {
   content: ".";
@@ -105,3 +120,9 @@ body {
   height: 0;
   clear: both;
   visibility: hidden; }
+
+form input[type=search] {
+  float: right;
+  width: 200px;
+  margin: 10px;
+  color: #888; }
