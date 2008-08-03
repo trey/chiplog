@@ -118,6 +118,10 @@ body {
   clear: both;
   padding-top: 10px;
   background: #E8E8E8; }
+  #main #entries {
+    margin: 20px 0; }
+    #main #entries .entry {
+      margin: 10px 20px; }
 
 #header:after,
 #main:after,
