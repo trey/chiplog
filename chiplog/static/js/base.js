@@ -1,3 +1,9 @@
 $(document).ready(function() {
-    // Stuff to do as soon as the DOM is ready;
+
+    if($('#s').val() == "") {
+		$('#s').toggleVal({ populateFrom: 'label', removeLabels: true });
+	} else {
+		$('#header div label').hide();
+	}
+
 });
