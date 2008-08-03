@@ -8,19 +8,27 @@ body
 #wrapper
   :width 680px
   :margin 30px auto
-  :background #E8E8E8
   :-moz-border-radius 10px
   :-webkit-border-radius 10px
+  :background #878787
 
 #header
-  :background #878787
-  :-moz-border-radius-topright 10px
-  :-moz-border-radius-topleft 10px
-  :-webkit-border-top-left-radius 10px
-  :-webkit-border-top-right-radius 10px
+  :padding 5px 19px 3px 17px
+  :border-bottom 2px solid #6f6f6f
+
+  form
+    :float right
 
 #main
   :clear both
+  :padding-top 10px
+  :background #E8E8E8
 
-#main, #primary, #secondary, .primary, .secondary
+#header,
+#main,
+#main form,
+#primary,
+#secondary,
+.primary,
+.secondary
   +clearfix

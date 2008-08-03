@@ -103,21 +103,28 @@ body {
 #wrapper {
   width: 680px;
   margin: 30px auto;
-  background: #E8E8E8;
   -moz-border-radius: 10px;
-  -webkit-border-radius: 10px; }
+  -webkit-border-radius: 10px;
+  background: #878787; }
 
 #header {
-  background: #878787;
-  -moz-border-radius-topright: 10px;
-  -moz-border-radius-topleft: 10px;
-  -webkit-border-top-left-radius: 10px;
-  -webkit-border-top-right-radius: 10px; }
+  padding: 5px 19px 3px 17px;
+  border-bottom: 2px solid #6f6f6f; }
+  #header form {
+    float: right; }
 
 #main {
-  clear: both; }
+  clear: both;
+  padding-top: 10px;
+  background: #E8E8E8; }
 
-#main:after, #primary:after, #secondary:after, .primary:after, .secondary:after {
+#header:after,
+#main:after,
+#main form:after,
+#primary:after,
+#secondary:after,
+.primary:after,
+.secondary:after {
   content: ".";
   display: block;
   height: 0;
@@ -125,11 +132,19 @@ body {
   visibility: hidden; }
 
 /* ---------- site/forms.sass ---------- */
-form input[type=search] {
-  float: right;
+#header form input[type=search] {
   width: 200px;
-  margin: 10px;
   color: #888; }
 
-textarea {
-  width: 600px; }
+#main form {
+  padding: 0 15px; }
+  #main form div {
+    margin-bottom: 10px; }
+  #main form .tags {
+    float: left; }
+  #main form .button {
+    float: right; }
+  #main form textarea {
+    width: 650px; }
+  #main form .errorlist {
+    color: darkred; }

@@ -1,10 +1,29 @@
 /* ---------- site/forms.sass ----------
 
-form input[type=search]
-  :float right
-  :width 200px
-  :margin 10px
-  :color #888
+// Search Form
+#header
+  form
 
-textarea
-  :width 600px
+    input[type=search]
+      :width 200px
+      :color #888
+
+// Log Entry Form
+#main
+  form
+    :padding 0 15px
+
+    div
+      :margin-bottom 10px
+
+    .tags
+      :float left
+
+    .button
+      :float right
+
+    textarea
+      :width 650px
+
+    .errorlist
+      :color darkred
