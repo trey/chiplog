@@ -25,9 +25,10 @@
 	<a href="/chiplog/">Cancel</a>
 	{% endif %}
 
-	<ul id="all_list">
 	{% for entry in entry_list %}
-		<li><span class="delete"><a href="/chiplog/delete/{{ entry.id }}/">X</a></span> <span class="date">{{ entry.created|date:"M d, Y" }}</span> <a href="/chiplog/edit/{{ entry.id }}/">{{ entry.body }}</a></li>
+		<div>
+			<span class="delete"><a href="/chiplog/delete/{{ entry.id }}/">X</a></span> <span class="date">{{ entry.created|date:"M d, Y" }}</span> <a href="/chiplog/edit/{{ entry.id }}/">{{ entry.body }}</a>
+		</div>
 	{% endfor %}
-	</ul>
+
 {% endblock %}

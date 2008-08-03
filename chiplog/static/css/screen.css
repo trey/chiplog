@@ -103,6 +103,7 @@ body {
 #wrapper {
   width: 680px;
   margin: 30px auto;
+  padding-bottom: 20px;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   background: #878787; }
@@ -137,7 +138,8 @@ body {
   color: #888; }
 
 #main form {
-  padding: 0 15px; }
+  padding: 0 15px;
+  border-bottom: 4px solid #ccc; }
   #main form div {
     margin-bottom: 10px; }
   #main form .tags {
