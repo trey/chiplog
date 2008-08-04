@@ -39,9 +39,6 @@ blockquote:before, blockquote:after, q:before, q:after {
 a {
   text-decoration: none; }
 
-*:focus {
-  outline: 0; }
-
 ins {
   text-decoration: none; }
 
