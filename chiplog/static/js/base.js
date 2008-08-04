@@ -10,6 +10,7 @@ $(document).ready(function() {
         $('#id_tags').fadeIn();
         $('#id_tags').focus();
         $(this).hide();
+        return false;
     });
     
 
