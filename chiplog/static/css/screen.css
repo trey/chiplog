@@ -117,7 +117,8 @@ body {
 #main {
   clear: both;
   padding-top: 10px;
-  background: #E8E8E8; }
+  background: #E8E8E8;
+  color: #838383; }
   #main #entries {
     margin: 20px 0; }
     #main #entries .entry {
@@ -142,7 +143,7 @@ body {
   color: #888; }
 
 #main form {
-  padding: 0 15px;
+  padding: 0 20px;
   border-bottom: 4px solid #ccc; }
   #main form div {
     margin-bottom: 10px; }
@@ -151,6 +152,6 @@ body {
   #main form .button {
     float: right; }
   #main form textarea {
-    width: 650px; }
+    width: 638px; }
   #main form .errorlist {
     color: darkred; }
