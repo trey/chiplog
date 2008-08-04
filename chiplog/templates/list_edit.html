@@ -28,7 +28,14 @@
 <div id="entries">
 	{% for entry in entry_list %}
 		<div class="entry">
-			<span class="delete"><a href="/chiplog/delete/{{ entry.id }}/">X</a></span> <span class="date">{{ entry.created|date:"M d, Y" }}</span> <a href="/chiplog/edit/{{ entry.id }}/">{{ entry.body }}</a>
+			<div class="meta">
+				<span class="delete"><a href="/chiplog/delete/{{ entry.id }}/">X</a></span>
+				<span class="edit"><a href="/chiplog/edit/{{ entry.id }}/">E</a></span>
+				<span class="date">{{ entry.created|date:"M d, Y" }}</span>
+			</div>
+			<div class="content">
+				{{ entry.body }}
+			</div><!-- .content -->
 		</div>
 	{% endfor %}
 </div><!-- #entries -->
