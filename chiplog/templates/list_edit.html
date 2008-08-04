@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load markup %}
+{% load humanize %}
 
 {% block header %}
 	<form action="search" method="get" accept-charset="utf-8">
@@ -32,7 +33,13 @@
 			<div class="meta">
 				<span class="delete"><a href="/chiplog/delete/{{ entry.id }}/">X</a></span>
 				<span class="edit"><a href="/chiplog/edit/{{ entry.id }}/">E</a></span>
-				<span class="date">{{ entry.created|date:"M d, Y" }}</span>
+				<span class="date">
+					{% ifequal entry.created|naturalday datetime.date.today|naturalday %}
+					{{ entry.created|timesince }}
+					{% else %}
+					{{ entry.created|time }}
+					{% endifequal %}
+				</span>
 			</div>
 			<div class="content">
 				{{ entry.body|markdown }}
