@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load markup %}
 
 {% block header %}
 	<form action="search" method="get" accept-charset="utf-8">
@@ -34,7 +35,7 @@
 				<span class="date">{{ entry.created|date:"M d, Y" }}</span>
 			</div>
 			<div class="content">
-				{{ entry.body }}
+				{{ entry.body|markdown }}
 			</div><!-- .content -->
 		</div>
 	{% endfor %}

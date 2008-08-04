@@ -82,6 +82,7 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
+    'django.contrib.markup',
 )
 
 FORCE_LOWERCASE_TAGS = True
