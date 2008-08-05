@@ -34,11 +34,11 @@
 				<span class="delete"><a href="/chiplog/delete/{{ entry.id }}/">X</a></span>
 				<span class="edit"><a href="/chiplog/edit/{{ entry.id }}/">E</a></span>
 				<span class="date">
-					{% ifequal entry.created|naturalday datetime.date.today|naturalday %}
-					{{ entry.created|timesince }}
+					{% if entry.is_today %}
+					{{ entry.created|timesince }} ago
 					{% else %}
 					{{ entry.created|time }}
-					{% endifequal %}
+					{% endif %}
 				</span>
 			</div>
 			<div class="content">
