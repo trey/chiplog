@@ -106,13 +106,10 @@ a:hover {
   padding-bottom: 20px;
   -moz-border-radius: 13px;
   -webkit-border-radius: 13px;
-  background: #878787; }
+  background: #565656; }
 
 #header {
-  padding: 5px 19px 5px 17px;
-  border-bottom-width: 4px;
-  border-bottom-style: solid;
-  border-bottom-color: #515151; }
+  padding: 5px 19px 5px 17px; }
 
 #main {
   clear: both;
