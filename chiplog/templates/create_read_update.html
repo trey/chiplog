@@ -32,13 +32,14 @@
 		<div class="entry">
 			<div class="meta">
 				<span class="delete"><a href="/chiplog/delete/{{ entry.id }}/">X</a></span>
-				<span class="edit"><a href="/chiplog/edit/{{ entry.id }}/">E</a></span>
 				<span class="date">
+					<a href="/chiplog/edit/{{ entry.id }}">
 					{% if entry.is_today %}
 					{{ entry.created|timesince }} ago
 					{% else %}
 					{{ entry.created|time }}
 					{% endif %}
+					</a>
 				</span>
 			</div>
 			<div class="content">

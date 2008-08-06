@@ -97,6 +97,9 @@ body {
   padding-bottom: 40px;
   background: #222222; }
 
+a:hover {
+  text-decoration: underline; }
+
 #wrapper {
   width: 680px;
   margin: 30px auto;
