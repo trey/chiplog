@@ -9,7 +9,7 @@ chiplog_delete = {
 }
 chiplog_save = {
     'model': Entry,
-    'template_name': 'list_edit.html',
+    'template_name': 'create_read_update.html',
     'extra_context': { 'entry_list': Entry.objects.all },
     'post_save_redirect': '/chiplog/',
 }
