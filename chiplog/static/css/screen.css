@@ -101,19 +101,18 @@ body {
   width: 680px;
   margin: 30px auto;
   padding-bottom: 20px;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
+  -moz-border-radius: 13px;
+  -webkit-border-radius: 13px;
   background: #878787; }
 
 #header {
-  padding: 5px 19px 3px 17px;
-  border-bottom: 2px solid #6f6f6f; }
+  padding: 5px 19px 5px 17px;
+  border-bottom: 2px solid #515151; }
   #header form {
     float: right; }
 
 #main {
   clear: both;
-  padding-top: 10px;
   background: #E8E8E8;
   color: #838383; }
   #main #entries {
@@ -141,15 +140,21 @@ body {
   color: #888; }
 
 #main form {
-  padding: 0 20px;
+  padding: 10px 20px 0;
   padding-bottom: 0;
-  border-bottom: 4px solid #ccc; }
+  border-bottom: 4px solid #ccc;
+  background: #565656; }
+  #main form a {
+    font-size: 11px;
+    color: #a2a2a2; }
   #main form div {
     margin-bottom: 10px; }
   #main form .tags {
     float: left; }
   #main form .button {
     float: right; }
+    #main form .button input {
+      width: 150px; }
   #main form textarea {
     width: 638px; }
   #main form .errorlist {
