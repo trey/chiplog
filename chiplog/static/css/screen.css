@@ -97,9 +97,6 @@ body {
   padding-bottom: 40px;
   background: #222222; }
 
-a:hover {
-  text-decoration: underline; }
-
 #wrapper {
   width: 680px;
   margin: 30px auto;
@@ -115,6 +112,11 @@ a:hover {
   clear: both;
   background: #e8e8e8;
   color: #878787; }
+  #main a {
+    color: #4183c4; }
+    #main a:hover {
+      color: #1364b4;
+      background: #bfd6ed; }
   #main #entries {
     margin: 20px 0; }
     #main #entries .entry {

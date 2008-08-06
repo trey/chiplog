@@ -5,8 +5,8 @@ body
   :padding-bottom 40px
   :background = !body_bg
 
-a:hover
-  :text-decoration underline
+//a:hover
+//  :text-decoration underline
 
 #wrapper
   :width 680px
@@ -23,11 +23,17 @@ a:hover
   //  :width 4px
   //  :style solid
   //  :color = !header_border
-
+  
 #main
   :clear both
   :background = !main_bg
   :color = !light_gray
+
+  a
+    :color = !blue
+    &:hover
+      :color = !blue_fg
+      :background = !blue_bg
 
   #entries
     :margin 20px 0
