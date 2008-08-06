@@ -144,7 +144,7 @@ a:hover {
 #main form {
   padding: 10px 20px 0;
   padding-bottom: 0;
-  border-bottom: 8px solid #ccc;
+  border-bottom: 10px solid #ccc;
   background: #565656; }
   #main form a {
     font-size: 11px;
