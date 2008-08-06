@@ -3,6 +3,7 @@
 // Search Form
 #header
   form
+    :float right
 
     input[type=search]
       :width 200px
@@ -13,18 +14,23 @@
   form
     :padding 10px 20px 0
     :padding-bottom 0
-    :border-bottom 4px solid #ccc
+    :border-bottom 8px solid #ccc
     :background #565656
 
     a
       :font-size 11px
       :color #a2a2a2
+      &:hover
+        :text-decoration underline
     
     div
       :margin-bottom 10px
 
     .tags
       :float left
+      
+      input
+        :width 200px
 
     .button
       :float right

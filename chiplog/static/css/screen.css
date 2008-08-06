@@ -107,13 +107,13 @@ body {
 
 #header {
   padding: 5px 19px 5px 17px;
-  border-bottom: 2px solid #515151; }
-  #header form {
-    float: right; }
+  border-bottom-width: 4px;
+  border-bottom-style: solid;
+  border-bottom-color: #515151; }
 
 #main {
   clear: both;
-  background: #E8E8E8;
+  background: #e8e8e8;
   color: #838383; }
   #main #entries {
     margin: 20px 0; }
@@ -135,22 +135,28 @@ body {
   visibility: hidden; }
 
 /* ---------- site/forms.sass ---------- */
-#header form input[type=search] {
-  width: 200px;
-  color: #888; }
+#header form {
+  float: right; }
+  #header form input[type=search] {
+    width: 200px;
+    color: #888; }
 
 #main form {
   padding: 10px 20px 0;
   padding-bottom: 0;
-  border-bottom: 4px solid #ccc;
+  border-bottom: 8px solid #ccc;
   background: #565656; }
   #main form a {
     font-size: 11px;
     color: #a2a2a2; }
+    #main form a:hover {
+      text-decoration: underline; }
   #main form div {
     margin-bottom: 10px; }
   #main form .tags {
     float: left; }
+    #main form .tags input {
+      width: 200px; }
   #main form .button {
     float: right; }
     #main form .button input {

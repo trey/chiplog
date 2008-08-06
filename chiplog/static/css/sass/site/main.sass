@@ -3,7 +3,7 @@
 body
   :font 14px "Gill Sans", Helvetica, sans-serif
   :padding-bottom 40px
-  :background #222222
+  :background = !body_bg
 
 #wrapper
   :width 680px
@@ -12,19 +12,19 @@ body
   :padding-bottom 20px
   :-moz-border-radius 13px
   :-webkit-border-radius 13px
-  :background #878787
+  :background = !wrapper_bg
 
 #header
   :padding 5px 19px 5px 17px
-  :border-bottom 2px solid #515151
-
-  form
-    :float right
+  :border-bottom
+    :width 4px
+    :style solid
+    :color = !header_border
 
 #main
   :clear both
-  :background #E8E8E8
-  :color #838383
+  :background = !main_bg
+  :color = !light_gray
 
   #entries
     :margin 20px 0
