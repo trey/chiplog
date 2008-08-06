@@ -33,13 +33,19 @@ body
     :color = !blue
     &:hover
       :color = !blue_fg
-      :background = !blue_bg
-
+      //:background = !blue_bg
+      
   #entries
     :margin 20px 0
   
     .entry
       :margin 10px 20px
+      
+      .delete a
+        :color = !red
+        &:hover
+          :text-decoration none
+          :color = !red_fg
 
 #header,
 #main,
