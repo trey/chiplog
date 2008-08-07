@@ -154,6 +154,11 @@ body {
     padding-bottom: 0;
     border-bottom: 10px solid #ccc;
     background: #565656; }
+    #main form textarea,
+    #main form .tags input {
+      color: #565656;
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px; }
     #main form a {
       font-size: 11px;
       color: #878787; }
@@ -162,10 +167,20 @@ body {
         text-decoration: underline; }
     #main form div {
       margin-bottom: 10px; }
+      #main form div.tags,
+      #main form div.button {
+        margin-bottom: 15px; }
     #main form .tags {
-      float: left; }
+      float: left;
+      position: relative; }
+      #main form .tags a {
+        display: block;
+        padding-top: 5px; }
       #main form .tags input {
-        width: 200px; }
+        width: 200px;
+        position: absolute;
+        top: -2px;
+        padding: 3px; }
     #main form .button {
       float: right; }
       #main form .button input {
@@ -174,7 +189,7 @@ body {
       padding: 5px;
       width: 628px;
       border-color: #ccc;
-      -webkit-border-radius: 6px;
-      -moz-border-radius: 6px; }
+      font-family: Monaco;
+      font-size: 12px; }
     #main form .errorlist {
       color: darkred; }
