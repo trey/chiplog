@@ -62,6 +62,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.middleware.doc.XViewMiddleware',
+    'django.contrib.redirects.middleware.RedirectFallbackMiddleware',
 )
 
 ROOT_URLCONF = 'chiplog_proj.urls'
@@ -77,6 +78,7 @@ TEMPLATE_DIRS = (
 INSTALLED_APPS = (
     'chiplog',
     'tagging',
+    'django.contrib.redirects',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
