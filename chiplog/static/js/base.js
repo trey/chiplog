@@ -20,4 +20,7 @@ $(document).ready(function() {
 		$('#header div label').hide();
 	}
 
+	// Timeago: http://timeago.yarp.com/
+	$('abbr[class*=timeago]').timeago();
+
 });
