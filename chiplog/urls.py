@@ -6,7 +6,8 @@ from models import Entry
 
 chiplog_list = {
     'queryset': Entry.objects.all(),
-    'template_name': 'create_read_update.html',
+    'template_object_name': 'entry',
+    'template_name': 'read.html',
 }
 chiplog_delete = {
     'model': Entry,
