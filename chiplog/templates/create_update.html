@@ -1,0 +1,17 @@
+{% if object %}
+<h2>Editing Entry from {{ object.created|date:"M d, Y" }}</h2>
+{% endif %}
+<form action="." method="post">
+	<div>
+		{{ form.body.errors }}
+		{{ form.body }}
+	</div>
+	<div class="tags">
+		{{ form.tags.errors }}
+		{{ form.tags }}
+	</div>
+	<div class="button"><input type="submit" value="Log It"></div>
+</form>
+{% if object %}
+<a href="/chiplog/">Cancel</a>
+{% endif %}

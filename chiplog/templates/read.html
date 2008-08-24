@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load markup %}
+{% load humanize %}
+
+{% block header-temp %}
+	<form action="search" method="get" accept-charset="utf-8">
+		<div><label for="s">Search</label><input type="search" value="" name="s" id="s" /></div>
+	</form>
+{% endblock %}
+
+{% block content %}	
+
+<div id="entries">
+	{% for entry in entry_list %}
+		<div class="entry">
+			<div class="meta">
+				<span class="delete"><a href="/chiplog/delete/{{ entry.id }}/">&otimes;</a></span>
+				<span class="date">
+					<a href="/chiplog/edit/{{ entry.id }}">
+						<abbr class="timeago" title="{{ entry.created|date:"Y-m-d G:i:s" }}">{{ entry.created|date:"l F j, Y" }}</abbr>
+					</a>
+				</span>
+			</div>
+			<div class="content">
+				{{ entry.body|markdown }}
+			</div><!-- .content -->
+		</div>
+	{% endfor %}
+</div><!-- #entries -->
+
+{% endblock %}
