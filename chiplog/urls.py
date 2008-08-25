@@ -17,7 +17,7 @@ chiplog_delete = {
 }
 chiplog_save = {
     'model': Entry,
-    'template_name': 'create_read_update.html',
+    'template_name': 'create.html',
     'extra_context': { 'entry_list': Entry.objects.all },
     'post_save_redirect': '/chiplog/',
 }
@@ -25,6 +25,7 @@ chiplog_save = {
 urlpatterns = patterns('',
     (r'^$', list_detail.object_list, chiplog_list),
     (r'^page/(?P<page>\w)/$', list_detail.object_list, chiplog_list),
+    (r'^new/$', create_update.create_object, chiplog_save),
     (r'^edit/(?P<object_id>\d+)/$', create_update.update_object, chiplog_save),
     (r'^delete/(?P<object_id>\d+)/$', create_update.delete_object, chiplog_delete)
 )
