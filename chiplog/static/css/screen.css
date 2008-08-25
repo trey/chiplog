@@ -109,6 +109,9 @@ body {
   padding: 5px 19px 5px 17px; }
 
 #main {
+  margin-top: 15px;
+  border-top: 10px solid #ccc;
+  border-bottom: 10px solid #ccc;
   clear: both;
   background: #e8e8e8;
   color: #878787; }
@@ -147,6 +150,9 @@ body {
   #nav a:hover {
     color: #777;
     background: #ccc; }
+  #nav a:active {
+    position: relative;
+    top: 1px; }
 
 #header:after,
 #main:after,
@@ -169,49 +175,47 @@ body {
     width: 200px;
     color: #888; }
 
-#main {
-  border-bottom: 10px solid #ccc; }
-  #main form {
-    padding: 8px 20px 0;
-    padding-bottom: 0;
-    border-bottom: 10px solid #ccc;
-    background: #565656; }
-    #main form textarea,
+#main form {
+  padding: 8px 20px 0;
+  padding-bottom: 0;
+  border-bottom: 10px solid #ccc;
+  background: #565656; }
+  #main form textarea,
+  #main form .tags input {
+    color: #565656;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px; }
+  #main form a {
+    font-size: 11px;
+    color: #878787; }
+    #main form a:hover {
+      color: inherit;
+      text-decoration: underline; }
+  #main form div {
+    margin-bottom: 10px; }
+    #main form div.tags,
+    #main form div.button {
+      margin-bottom: 15px; }
+  #main form .tags {
+    float: left;
+    position: relative; }
+    #main form .tags a {
+      display: block;
+      padding-top: 5px; }
     #main form .tags input {
-      color: #565656;
-      -webkit-border-radius: 6px;
-      -moz-border-radius: 6px; }
-    #main form a {
-      font-size: 11px;
-      color: #878787; }
-      #main form a:hover {
-        color: inherit;
-        text-decoration: underline; }
-    #main form div {
-      margin-bottom: 10px; }
-      #main form div.tags,
-      #main form div.button {
-        margin-bottom: 15px; }
-    #main form .tags {
-      float: left;
-      position: relative; }
-      #main form .tags a {
-        display: block;
-        padding-top: 5px; }
-      #main form .tags input {
-        width: 200px;
-        position: absolute;
-        top: -2px;
-        padding: 3px; }
-    #main form .button {
-      float: right; }
-      #main form .button input {
-        width: 150px; }
-    #main form textarea {
-      padding: 5px;
-      width: 628px;
-      border-color: #ccc;
-      font-family: Monaco;
-      font-size: 12px; }
-    #main form .errorlist {
-      color: darkred; }
+      width: 200px;
+      position: absolute;
+      top: -2px;
+      padding: 3px; }
+  #main form .button {
+    float: right; }
+    #main form .button input {
+      width: 150px; }
+  #main form textarea {
+    padding: 5px;
+    width: 628px;
+    border-color: #ccc;
+    font-family: Monaco;
+    font-size: 12px; }
+  #main form .errorlist {
+    color: darkred; }
