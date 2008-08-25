@@ -27,5 +27,17 @@
 		</div>
 	{% endfor %}
 </div><!-- #entries -->
+{% endblock %}
 
+{% block navigation %}
+{% if is_paginated %}
+<div id="nav">
+  {% if has_next %}
+  <a class="older" href="/chiplog/page/{{ next }}/">Older</a>
+  {% endif %}
+  {% if has_previous %}
+  <a class="newer" href="/chiplog/page/{{ previous }}/">Newer</a>
+  {% endif %}
+</div><!-- #nav -->
+{% endif %}
 {% endblock %}

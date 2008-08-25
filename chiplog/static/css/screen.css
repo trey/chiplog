@@ -101,7 +101,6 @@ body {
 #wrapper {
   width: 680px;
   margin: 30px auto;
-  padding-bottom: 20px;
   -moz-border-radius: 13px;
   -webkit-border-radius: 13px;
   background: #565656; }
@@ -126,6 +125,28 @@ body {
         #main #entries .entry .delete a:hover {
           text-decoration: none;
           color: #821d13; }
+
+#nav:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+#nav a {
+  float: left;
+  margin: 8px 20px 10px;
+  padding: 5px 14px;
+  font-size: 16px;
+  color: #838383;
+  text-transform: uppercase;
+  background: #c0c0c0;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px; }
+  #nav a.older {
+    float: right; }
+  #nav a:hover {
+    color: #777;
+    background: #ccc; }
 
 #header:after,
 #main:after,

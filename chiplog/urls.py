@@ -8,6 +8,7 @@ chiplog_list = {
     'queryset': Entry.objects.all(),
     'template_object_name': 'entry',
     'template_name': 'read.html',
+    'paginate_by': 15,
 }
 chiplog_delete = {
     'model': Entry,
@@ -23,6 +24,7 @@ chiplog_save = {
 
 urlpatterns = patterns('',
     (r'^$', list_detail.object_list, chiplog_list),
+    (r'^page/(?P<page>\w)/$', list_detail.object_list, chiplog_list),
     (r'^edit/(?P<object_id>\d+)/$', create_update.update_object, chiplog_save),
     (r'^delete/(?P<object_id>\d+)/$', create_update.delete_object, chiplog_delete)
 )

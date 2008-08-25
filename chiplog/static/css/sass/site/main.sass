@@ -11,8 +11,6 @@ body
 #wrapper
   :width 680px
   :margin 30px auto
-  // TODO remove this padding when you add Older / Newer navigation
-  :padding-bottom 20px
   :-moz-border-radius 13px
   :-webkit-border-radius 13px
   :background = !mid_gray
@@ -46,6 +44,24 @@ body
         &:hover
           :text-decoration none
           :color = !red_fg
+  
+#nav
+  +clearfix
+  a
+    :float left
+    :margin 8px 20px 10px
+    :padding 5px 14px
+    :font-size 16px
+    :color #838383
+    :text-transform uppercase
+    :background #c0c0c0
+    :-moz-border-radius 5px
+    :-webkit-border-radius 5px
+    &.older
+      :float right
+    &:hover
+      :color #777
+      :background #ccc
 
 #header,
 #main,
