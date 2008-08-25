@@ -55,6 +55,7 @@ table {
 #primary p {
   line-height: 1.4em; }
   #primary p code {
+    font-size: 13px;
     padding: 0 2px;
     background: #ccc; }
 #primary li {
