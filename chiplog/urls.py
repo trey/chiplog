@@ -8,7 +8,7 @@ chiplog_list = {
     'queryset': Entry.objects.all(),
     'template_object_name': 'entry',
     'template_name': 'read.html',
-    'paginate_by': 15,
+    'paginate_by': 10,
 }
 chiplog_delete = {
     'model': Entry,
