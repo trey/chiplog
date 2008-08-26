@@ -1,3 +1,7 @@
+{% extends "base.html" %}
+
+{% block content %}
+	
 {% if object %}
 <h2>Editing Entry from {{ object.created|date:"M d, Y" }}</h2>
 {% endif %}
@@ -15,3 +19,5 @@
 {% if object %}
 <a href="/chiplog/">Cancel</a>
 {% endif %}
+
+{% endblock %}

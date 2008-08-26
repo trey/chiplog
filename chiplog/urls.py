@@ -17,7 +17,7 @@ chiplog_delete = {
 }
 chiplog_save = {
     'model': Entry,
-    'template_name': 'create.html',
+    'template_name': 'create_update.html',
     'extra_context': { 'entry_list': Entry.objects.all },
     'post_save_redirect': '/chiplog/',
 }
