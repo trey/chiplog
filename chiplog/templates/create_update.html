@@ -14,7 +14,14 @@
 		{{ form.tags.errors }}
 		{{ form.tags }}
 	</div>
-	<div class="button"><input type="submit" value="Log It"></div>
+	<div class="button">
+	{% if object %}
+	<input type="submit" value="ReLog It">
+	{% else %}
+	<input type="submit" value="Log It">
+	{% endif %}
+	</div>
+
 </form>
 {% if object %}
 <a href="/chiplog/">Cancel</a>
