@@ -16,12 +16,13 @@
 
 <div id="entries">
 	{% for entry in entry_list %}
+		{% ifchanged %}{{ entry.created|naturalday:"l, F j, Y"|title }}{% endifchanged %}
 		<div class="entry">
 			<div class="meta">
 				<span class="delete"><a href="/chiplog/delete/{{ entry.id }}/">&otimes;</a></span>
 				<span class="date">
 					<a href="/chiplog/edit/{{ entry.id }}">
-						<abbr class="timeago" title="{{ entry.created|date:"Y-m-d G:i:s" }}">{{ entry.created|date:"l F j, Y" }}</abbr>
+						{{ entry.created|date:"g:i a" }}
 					</a>
 				</span>
 			</div>

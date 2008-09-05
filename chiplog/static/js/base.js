@@ -21,6 +21,6 @@ $(document).ready(function() {
 	}
 
 	// Timeago: http://timeago.yarp.com/
-	$('abbr[class*=timeago]').timeago();
+	// $('abbr[class*=timeago]').timeago();
 
 });
