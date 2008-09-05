@@ -16,7 +16,7 @@
 
 <div id="entries">
 	{% for entry in entry_list %}
-		{% ifchanged %}{{ entry.created|naturalday:"l, F j, Y"|title }}{% endifchanged %}
+		{% ifchanged %}<h2>{{ entry.created|naturalday:"l, F j, Y"|title }}</h2>{% endifchanged %}
 		<div class="entry">
 			<div class="meta">
 				<span class="delete"><a href="/chiplog/delete/{{ entry.id }}/">&otimes;</a></span>

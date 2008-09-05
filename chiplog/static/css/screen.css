@@ -80,18 +80,6 @@ table {
   -webkit-border-radius: 5px; }
 
 /* ---------- base/shortcuts.sass ---------- */
-.center {
-  text-align: center; }
-
-.right {
-  float: right; }
-
-.left {
-  float: left; }
-
-.clear {
-  clear: both; }
-
 /* ---------- site/main.sass ---------- */
 body {
   font: 14px "Gill Sans", Helvetica, sans-serif;
@@ -109,12 +97,21 @@ body {
   padding: 5px 19px 5px 17px; }
 
 #main {
+  margin: 0;
+  padding: 0;
   margin-top: 15px;
   border-top: 10px solid #ccc;
   border-bottom: 10px solid #ccc;
   clear: both;
   background: #e8e8e8;
   color: #878787; }
+  #main h2 {
+    margin: 15px 400px 25px 0;
+    padding: 10px;
+    font-weight: normal;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: #bbbbbb; }
   #main a {
     color: #4183c4; }
     #main a:hover {

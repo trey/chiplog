@@ -23,12 +23,22 @@ body
   //  :color = !header_border
   
 #main
+  +reset
   :margin-top 15px
   :border-top 10px solid #ccc
   :border-bottom 10px solid #ccc
   :clear both
   :background = !main_bg
   :color = !light_gray
+
+  h2
+    :margin 15px 400px 25px 0
+    :padding 10px
+    :font-weight normal
+    :border-bottom
+      :width 2px
+      :style solid
+      :color = !date_border
 
   a
     :color = !blue
