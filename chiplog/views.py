@@ -2,6 +2,7 @@ from django.contrib.auth.decorators import permission_required
 from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response, get_object_or_404
 from django.views.generic import date_based, list_detail, create_update
+from django.conf import settings
 from chiplog.models import *
 from chiplog.forms import EntryForm
 
@@ -11,6 +12,8 @@ def entry_list(request, page=0):
         if form.is_valid():
             form.save()
             return HttpResponseRedirect('/chiplog/')
+        else:
+            return render_to_response('entry_form.html', {'form': form, 'MEDIA_URL': settings.MEDIA_URL})
     else:
         return list_detail.object_list(
             request,
