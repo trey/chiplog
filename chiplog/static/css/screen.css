@@ -50,25 +50,25 @@ table {
   border-spacing: 0; }
 
 /* ---------- base/copy.sass ---------- */
-#primary p, #primary ul, #primary ol {
+#main p, #main ul, #main ol {
   margin: 10px 0; }
-#primary p {
+#main p {
   line-height: 1.4em; }
-  #primary p code {
+  #main p code {
     font-size: 13px;
     padding: 0 2px;
     background: #ccc; }
-#primary li {
+#main li {
   margin-left: 20px; }
-#primary ul li {
+#main ul li {
   list-style: disc; }
-#primary ol li {
+#main ol li {
   list-style: decimal; }
-#primary blockquote {
+#main blockquote {
   padding-left: 15px;
   border-left: 2px solid #ccc;
   color: #666; }
-#primary pre {
+#main pre {
   color: #777;
   font-size: 11px;
   line-height: 1.4em;
@@ -81,11 +81,6 @@ table {
 
 /* ---------- base/shortcuts.sass ---------- */
 /* ---------- site/main.sass ---------- */
-.errorlist li {
-  margin: 0;
-  padding: 0;
-  list-style-type: none; }
-
 body {
   font: 14px "Gill Sans", Helvetica, sans-serif;
   padding-bottom: 40px;
@@ -237,5 +232,9 @@ body {
     border-color: #ccc;
     font-family: Monaco;
     font-size: 12px; }
-  #main form .errorlist {
-    color: darkred; }
+  #main form ul.errorlist li {
+    margin: 0;
+    padding: 0;
+    color: darkred;
+    text-transform: uppercase;
+    list-style-type: none; }
