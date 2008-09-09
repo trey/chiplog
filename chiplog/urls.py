@@ -2,7 +2,8 @@ from django.conf.urls.defaults import *
 from django.views.generic import create_update
 from django.views.generic import date_based
 from django.views.generic import list_detail
-from models import Entry
+from chiplog.models import Entry
+from chiplog import views
 
 chiplog_list = {
     'queryset': Entry.objects.all(),
