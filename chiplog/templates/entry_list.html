@@ -2,29 +2,38 @@
 {% load markup %}
 {% load humanize %}
 
+{% block class %}{% if has_previous %} class="paginated"{% endif %}{% endblock %}
+
 {% block header-temp %}
 	<form action="search" method="get" accept-charset="utf-8">
 		<div><label for="s">Search</label><input type="search" value="" name="s" id="s" /></div>
 	</form>
 {% endblock %}
 
-{% block header-temp-two %}
-	<a href="/chiplog/new/">New Entry</a>
+{% block header %}
+	{% if has_previous %}
+		<div id="add">
+			<a href="/chiplog/">New Entry</a>
+		</div><!-- #add -->
+	{% endif %}
 {% endblock %}
 
 {% block content %}	
 
-<form action="." method="post">
-	<div>
-		{{ form.body.errors }}
-		{{ form.body }}
-	</div>
-	<div class="tags">
-		{{ form.tags.errors }}
-		{{ form.tags }}
-	</div>
-	<div class="button"><input type="submit" value="Log It"></div>
-</form>
+{% if has_previous %}
+{% else %}
+	<form action="." method="post">
+		<div>
+			{{ form.body.errors }}
+			{{ form.body }}
+		</div>
+		<div class="tags">
+			{{ form.tags.errors }}
+			{{ form.tags }}
+		</div>
+		<div class="button"><input type="submit" value="Log It"></div>
+	</form>
+{% endif %}
 
 <div id="entries">
 	{% for entry in entry_list %}

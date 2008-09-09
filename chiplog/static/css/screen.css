@@ -94,7 +94,17 @@ body {
   background: #565656; }
 
 #header {
-  padding: 5px 19px 5px 17px; }
+  padding: 5px 19px 5px 20px; }
+  .paginated #header {
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
+    border-bottom-color: #515151; }
+  #header a {
+    display: block;
+    padding: 5px 0;
+    color: #878787; }
+    #header a:hover {
+      text-decoration: underline; }
 
 #main {
   margin: 0;
@@ -103,6 +113,8 @@ body {
   clear: both;
   background: #e8e8e8;
   color: #878787; }
+  .paginated #main {
+    border-top: 10px solid #ccc; }
   #main h2 {
     margin: 15px 400px 25px 0;
     padding: 5px 20px 7px;

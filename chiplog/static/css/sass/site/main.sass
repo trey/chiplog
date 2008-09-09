@@ -16,20 +16,30 @@ body
   :background = !mid_gray
 
 #header
-  :padding 5px 19px 5px 17px
-  //:border-bottom
-  //  :width 4px
-  //  :style solid
-  //  :color = !header_border
-  
+  :padding 5px 19px 5px 20px
+  .paginated &
+    :border-bottom
+      :width 4px
+      :style solid
+      :color = !header_border
+  a
+    :display block
+    :padding 5px 0
+    :color = !light_gray
+    &:hover
+      :text-decoration underline
+
 #main
   +reset
-  //:margin-top 15px
-  //:border-top 10px solid #ccc
   :border-bottom 10px solid #ccc
   :clear both
   :background = !main_bg
   :color = !light_gray
+
+  .paginated &
+    //:margin-top 15px
+    :border-top 10px solid #ccc
+  
 
   h2
     :margin 15px 400px 25px 0
