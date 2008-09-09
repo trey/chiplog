@@ -14,6 +14,18 @@
 
 {% block content %}	
 
+<form action="." method="post">
+	<div>
+		{{ form.body.errors }}
+		{{ form.body }}
+	</div>
+	<div class="tags">
+		{{ form.tags.errors }}
+		{{ form.tags }}
+	</div>
+	<div class="button"><input type="submit" value="Log It"></div>
+</form>
+
 <div id="entries">
 	{% for entry in entry_list %}
 		{% ifchanged %}<h2>{{ entry.created|naturalday:"l, F j, Y"|title }}</h2>{% endifchanged %}
