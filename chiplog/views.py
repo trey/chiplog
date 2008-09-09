@@ -18,6 +18,7 @@ def entry_list(request, page=0):
             template_object_name = 'entry',
             template_name = 'read.html',
             paginate_by = 10,
+            page = page,
             extra_context = {'form': EntryForm}
         )
 
