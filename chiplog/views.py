@@ -22,9 +22,10 @@ def entry_list(request, page=0):
             extra_context = {'form': EntryForm}
         )
 
-def entry_delete(request):
+def entry_delete(request, object_id):
     return create_update.delete_object(
         request,
+        object_id = object_id,
         model = Entry,
         template_name = 'delete.html',
         post_delete_redirect = '/chiplog/',
@@ -38,11 +39,11 @@ def entry_create(request):
         post_save_redirect = '/chiplog/',
     )
 
-def entry_update(request):
+def entry_update(request, object_id):
     return create_update.update_object(
         request,
+        object_id = object_id,
         model = Entry,
         template_name = 'create_update.html',
         post_save_redirect = '/chiplog/',
     )
-
