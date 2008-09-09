@@ -5,7 +5,7 @@
 {% block content %}
 	
 {% if object %}
-<h2>Editing Entry from {{ object.created|date:"M d, Y" }}</h2>
+<h1>Editing Entry from {{ object.created|date:"l, F j, Y" }}</h1>
 {% endif %}
 <form action="." method="post">
 	<div>
@@ -18,15 +18,12 @@
 	</div>
 	<div class="button">
 	{% if object %}
+	<a href="/chiplog/">Cancel</a>
 	<input type="submit" value="ReLog It">
 	{% else %}
 	<input type="submit" value="Log It">
 	{% endif %}
 	</div>
-
 </form>
-{% if object %}
-<a href="/chiplog/">Cancel</a>
-{% endif %}
 
 {% endblock %}
