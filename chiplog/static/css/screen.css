@@ -81,6 +81,11 @@ table {
 
 /* ---------- base/shortcuts.sass ---------- */
 /* ---------- site/main.sass ---------- */
+.errorlist li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
 body {
   font: 14px "Gill Sans", Helvetica, sans-serif;
   padding-bottom: 40px;
@@ -182,6 +187,13 @@ body {
   #header form input[type=search] {
     width: 200px;
     color: #888; }
+
+.lone_form #main {
+  padding-bottom: 10px;
+  background: none;
+  border: none; }
+  .lone_form #main form {
+    border: none; }
 
 #main form {
   padding: 8px 20px 0;
