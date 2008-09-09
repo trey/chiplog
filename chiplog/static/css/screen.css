@@ -115,6 +115,17 @@ body {
   color: #878787; }
   .paginated #main {
     border-top: 10px solid #ccc; }
+  #main h1 {
+    font-size: 20px;
+    padding: 10px 20px;
+    color: #f4d75b;
+    font-weight: normal; }
+    #main h1 strong {
+      font-weight: normal;
+      padding-bottom: 1px;
+      border-bottom-color: #f4d75b;
+      border-bottom-style: solid;
+      border-bottom-width: 1px; }
   #main h2 {
     margin: 15px 400px 25px 0;
     padding: 5px 20px 7px;

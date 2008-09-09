@@ -5,7 +5,7 @@
 {% block content %}
 	
 {% if object %}
-<h1>Editing Entry from {{ object.created|date:"l, F j, Y" }}</h1>
+<h1>Editing Entry from <strong>{{ object.created|date:"l, F j, Y" }}</strong> at <strong>{{ object.created|date:"g:i a" }}</strong></h1>
 {% endif %}
 <form action="." method="post">
 	<div>
@@ -17,11 +17,11 @@
 		{{ form.tags }}
 	</div>
 	<div class="button">
+		<a href="/chiplog/">Cancel</a>
 	{% if object %}
-	<a href="/chiplog/">Cancel</a>
-	<input type="submit" value="ReLog It">
+		<input type="submit" value="ReLog It">
 	{% else %}
-	<input type="submit" value="Log It">
+		<input type="submit" value="Log It">
 	{% endif %}
 	</div>
 </form>
