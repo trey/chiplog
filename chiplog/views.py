@@ -16,7 +16,7 @@ def entry_list(request, page=0):
             request,
             queryset = Entry.objects.all(),
             template_object_name = 'entry',
-            template_name = 'read.html',
+            template_name = 'entry_list.html',
             paginate_by = 10,
             page = page,
             extra_context = {'form': EntryForm}
@@ -27,7 +27,7 @@ def entry_delete(request, object_id):
         request,
         object_id = object_id,
         model = Entry,
-        template_name = 'delete.html',
+        template_name = 'entry_confirm_delete.html',
         post_delete_redirect = '/chiplog/',
     )
 
@@ -35,7 +35,7 @@ def entry_create(request):
     return create_update.create_object(
         request,
         model = Entry,
-        template_name = 'create_update.html',
+        template_name = 'entry_form.html',
         post_save_redirect = '/chiplog/',
     )
 
@@ -44,6 +44,6 @@ def entry_update(request, object_id):
         request,
         object_id = object_id,
         model = Entry,
-        template_name = 'create_update.html',
+        template_name = 'entry_form.html',
         post_save_redirect = '/chiplog/',
     )
