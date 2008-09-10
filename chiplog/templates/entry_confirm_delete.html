@@ -1,8 +1,15 @@
 {% extends 'base.html' %}
 
+{% block class %} class="entry_delete"{% endblock %}
+
 {% block content %}	
-	<form action="." method="post">
-		<div><label>Are you sure?</label><input class="button" type="submit" value="Delete Entry"></div>
-		<div class="content">{{ object.body }}</div>
-	</form>
+
+<h1>Deleting Entry from <strong>{{ object.created|date:"l, F j, Y" }}</strong> at <strong>{{ object.created|date:"g:i a" }}</strong></h1>
+<form action="." method="post">
+	<div class="entry">{{ object.body }}</div>
+	<div class="button">
+		<a href="/chiplog/">Cancel</a>
+		<input type="submit" value="Delete Entry">
+	</div><!-- .button -->
+</form>
 {% endblock %}

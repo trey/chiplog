@@ -10,7 +10,9 @@
       :color #888
 
 // Form on a page by itself
-.lone_form
+// & Delete confirmation
+.lone_form,
+.entry_delete
   #main
     :padding-bottom 10px
     :background none
@@ -18,7 +20,16 @@
 
     form
       :border none
-  
+.entry_delete
+  #main form
+    +reset
+    .entry
+      :margin 10px 0
+      :padding 20px
+      :background = !main_bg
+    input
+      :margin 10px 30px 0 0
+
 // Log Entry Form
 #main
 

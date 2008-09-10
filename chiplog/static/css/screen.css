@@ -194,12 +194,24 @@ body {
     width: 200px;
     color: #888; }
 
-.lone_form #main {
+.lone_form #main,
+.entry_delete #main {
   padding-bottom: 10px;
   background: none;
   border: none; }
-  .lone_form #main form {
+  .lone_form #main form,
+  .entry_delete #main form {
     border: none; }
+
+.entry_delete #main form {
+  margin: 0;
+  padding: 0; }
+  .entry_delete #main form .entry {
+    margin: 10px 0;
+    padding: 20px;
+    background: #e8e8e8; }
+  .entry_delete #main form input {
+    margin: 10px 30px 0 0; }
 
 #main form {
   padding: 8px 20px 0;
