@@ -56,14 +56,16 @@
 {% endblock %}
 
 {% block navigation %}
-{% if is_paginated %}
 <div id="nav">
+{% if is_paginated %}
   {% if has_next %}
   <a class="older" href="/chiplog/page/{{ next }}/">Older</a>
   {% endif %}
   {% if has_previous %}
   <a class="newer" href="/chiplog/page/{{ previous }}/">Newer</a>
   {% endif %}
-</div><!-- #nav -->
+{% else %}
+<div style="height:20px;"></div>
 {% endif %}
+</div><!-- #nav -->
 {% endblock %}
