@@ -24,6 +24,7 @@ def entry_list(request, page=0):
             page = page,
             extra_context = {'form': EntryForm}
         )
+entry_list = permission_required('entries.can_add', login_url='/admin/')(entry_list)
 
 def entry_delete(request, object_id):
     return create_update.delete_object(
@@ -33,6 +34,7 @@ def entry_delete(request, object_id):
         template_name = 'entry_confirm_delete.html',
         post_delete_redirect = '/chiplog/',
     )
+entry_delete = permission_required('entries.can_delete', login_url='/admin/')(entry_delete)
 
 def entry_create(request):
     return create_update.create_object(
@@ -41,6 +43,7 @@ def entry_create(request):
         template_name = 'entry_form.html',
         post_save_redirect = '/chiplog/',
     )
+entry_create = permission_required('entries.can_add', login_url='/admin/')(entry_create)
 
 def entry_update(request, object_id):
     return create_update.update_object(
@@ -50,3 +53,4 @@ def entry_update(request, object_id):
         template_name = 'entry_form.html',
         post_save_redirect = '/chiplog/',
     )
+entry_update = permission_required('entries.can_update', login_url='/admin/')(entry_update)
