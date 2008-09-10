@@ -172,6 +172,8 @@ body {
   #nav a:active {
     position: relative;
     top: 1px; }
+#nav .empty_nav {
+  height: 20px; }
 
 #header:after,
 #main:after,
