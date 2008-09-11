@@ -6,7 +6,7 @@ urlpatterns = patterns('',
         view=views.entry_list,
         name='chiplog_index'),
 
-    url(r'^page/(?P<page>\w)/$',
+    url(r'^page/(?P<page>\d+)/$',
         view=views.entry_list,
         name='chiplog_index_paginated'),
 
