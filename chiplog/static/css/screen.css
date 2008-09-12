@@ -213,7 +213,10 @@ body {
     padding: 20px;
     background: #e8e8e8; }
     .entry_delete #main form .entry a {
-      size: inherit; }
+      font-size: inherit;
+      color: #4183c4; }
+      .entry_delete #main form .entry a:hover {
+        color: #1364b4; }
   .entry_delete #main form input {
     margin: 10px 30px 0 0; }
   .entry_delete #main form .tags {
