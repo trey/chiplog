@@ -2,12 +2,12 @@
 {% load markup %}
 {% load humanize %}
 
-{% block class %}{% if has_previous %} class="search paginated"{% else %} class="search"{% endif %}{% endblock %}
+{% block class %} class="search"{% endblock %}
 
 {% block search %}
 <div id="search">
 	<form action="/chiplog/search/" method="get" accept-charset="utf-8">
-		<div><label for="s">Search</label><input type="text" value="" name="s" id="s" /></div>
+		<div><label for="s">Search</label><input type="text" value="{{ search_term }}" name="s" id="s" /></div>
 	</form>
 </div><!-- #search -->
 {% endblock %}
@@ -43,15 +43,6 @@
 
 {% block navigation %}
 <div id="nav">
-{% if is_paginated %}
-  {% if has_next %}
-  <a class="older" href="/chiplog/page/{{ next }}/">Older</a>
-  {% endif %}
-  {% if has_previous %}
-  <a class="newer" href="/chiplog/page/{{ previous }}/">Newer</a>
-  {% endif %}
-{% else %}
 <div class="empty_nav"></div>
-{% endif %}
 </div><!-- #nav -->
 {% endblock %}
