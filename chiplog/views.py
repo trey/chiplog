@@ -26,6 +26,15 @@ def entry_list(request, page=0):
         )
 entry_list = permission_required('entries.can_add', login_url='/admin/')(entry_list)
 
+def entry_detail(request, object_id):
+    return list_detail.object_detail(
+        request,
+        object_id = object_id,
+        queryset = Entry.objects.all(),
+        template_name = 'entry_detail.html'
+    )
+entry_detail = permission_required('entries.can_add', login_url='/admin/')(entry_detail)
+
 def entry_delete(request, object_id):
     return create_update.delete_object(
         request,

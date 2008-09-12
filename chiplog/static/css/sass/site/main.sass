@@ -38,7 +38,24 @@ body
   .paginated &,
   .search &
     :border-top 10px solid #ccc
-  
+
+  .entry_detail &
+    +permalink_style
+    :padding-bottom 10px
+    :background none
+    :border none
+    .tags
+      :margin 10px 0 0 20px
+      :padding 10px 0
+      span
+        :color = !almost_white
+    #edit
+      :width 100px
+      :float right
+      :margin 10px 20px 0 0
+      :text-align right
+      a
+        +small_link
   h1
     :font-size 20px
     :padding 10px 20px

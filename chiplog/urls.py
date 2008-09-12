@@ -6,6 +6,10 @@ urlpatterns = patterns('',
         view=views.entry_list,
         name='chiplog_index'),
 
+    url(r'^(?P<object_id>\d+)/$',
+        view=views.entry_detail,
+        name='chiplog_detail'),
+
     url(r'^page/(?P<page>\d+)/$',
         view=views.entry_list,
         name='chiplog_index_paginated'),

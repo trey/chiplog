@@ -8,7 +8,7 @@
 <h1>Deleting Entry from <strong>{{ object.created|date:"l, F j, Y" }}</strong> at <strong>{{ object.created|date:"g:i a" }}</strong></h1>
 <form action="." method="post">
 	<div class="entry">{{ object.body|markdown }}</div>
-	<div class="tags list">Tags: <span>{{ object.tags }}</span></div>
+	{% if object.tags %}<div class="tags list">Tags: <span>{{ object.tags }}</span></div>{% endif %}
 	<div class="button">
 		<a href="/chiplog/">Cancel</a>
 		<input type="submit" value="Delete Entry">

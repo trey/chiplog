@@ -118,6 +118,35 @@ body {
   .paginated #main,
   .search #main {
     border-top: 10px solid #ccc; }
+  .entry_detail #main {
+    padding-bottom: 10px;
+    background: none;
+    border: none; }
+    .entry_detail #main .entry {
+      margin: 10px 0;
+      padding: 20px;
+      background: #e8e8e8; }
+      .entry_detail #main .entry a {
+        font-size: inherit;
+        color: #4183c4; }
+        .entry_detail #main .entry a:hover {
+          color: #1364b4; }
+    .entry_detail #main .tags {
+      margin: 10px 0 0 20px;
+      padding: 10px 0; }
+      .entry_detail #main .tags span {
+        color: #e8e8e8; }
+    .entry_detail #main #edit {
+      width: 100px;
+      float: right;
+      margin: 10px 20px 0 0;
+      text-align: right; }
+      .entry_detail #main #edit a {
+        font-size: 11px;
+        color: #878787; }
+        .entry_detail #main #edit a:hover {
+          color: inherit;
+          text-decoration: underline; }
   #main h1 {
     font-size: 20px;
     padding: 10px 20px;
