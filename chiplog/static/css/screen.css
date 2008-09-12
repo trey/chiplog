@@ -105,6 +105,8 @@ body {
     color: #878787; }
     #header a:hover {
       text-decoration: underline; }
+  #header #add {
+    float: left; }
 
 #main {
   margin: 0;
@@ -191,7 +193,8 @@ body {
 
 /* ---------- site/forms.sass ---------- */
 #header form {
-  float: right; }
+  float: right;
+  margin-top: 5px; }
   #header form input[type=search] {
     width: 200px;
     color: #888; }

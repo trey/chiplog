@@ -4,10 +4,10 @@
 
 {% block class %}{% if has_previous %} class="paginated"{% endif %}{% endblock %}
 
-{% block header-temp %}
-	<form action="search" method="get" accept-charset="utf-8">
-		<div><label for="s">Search</label><input type="search" value="" name="s" id="s" /></div>
-	</form>
+{% block search %}
+<form id="search" action="search" method="get" accept-charset="utf-8">
+	<div><label for="s">Search</label><input type="search" value="" name="s" id="s" /></div>
+</form>
 {% endblock %}
 
 {% block header %}
