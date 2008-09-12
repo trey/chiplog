@@ -7,7 +7,7 @@ $(document).ready(function() {
 	if ($('#id_tags').val() == "") {
 		$('#id_tags').hide();
 	};
-	$('.tags').append('<a href="#">Add Tags</a>');
+	$('.tags').not('.list').append('<a href="#">Add Tags</a>');
 	$('.tags a').click(function() {
 		$('#id_tags').fadeIn();
 		$('#id_tags').focus();
