@@ -29,6 +29,7 @@ $(document).ready(function() {
 		$('#search form').toggle('fast');
 		if ($(this).html() == 'Search') {
 			$(this).html('Close Search');
+			$('#s').focus();
 		} else {
 			$(this).html('Search');
 		};
