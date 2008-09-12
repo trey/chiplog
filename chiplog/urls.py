@@ -21,4 +21,8 @@ urlpatterns = patterns('',
     url(r'^delete/(?P<object_id>\d+)/$',
         view=views.entry_delete,
         name='chiplog_delete'),
+
+    url (r'^search/$',
+        view=views.search,
+        name='entry_search'),
 )

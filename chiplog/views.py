@@ -3,6 +3,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response, get_object_or_404
 from django.views.generic import date_based, list_detail, create_update
 from django.conf import settings
+from django.template import RequestContext
 from chiplog.models import *
 from chiplog.forms import EntryForm
 
@@ -54,3 +55,18 @@ def entry_update(request, object_id):
         post_save_redirect = '/chiplog/',
     )
 entry_update = permission_required('entries.can_update', login_url='/admin/')(entry_update)
+
+def search(request):
+    if request.GET:
+        search_term = '%s' % request.GET['s']
+        if len(search_term) != 0:
+            entry_list = Entry.objects.filter(body__icontains=search_term)
+            context = {'entry_list': entry_list, 'search_term':search_term}
+            return render_to_response('entry_search.html', context, context_instance=RequestContext(request))
+        else:
+            message = 'Search term was too vague. Please try again.'
+            context = {'message':message}
+            return render_to_response('entry_search.html', context, context_instance=RequestContext(request))
+    else:
+        return render_to_response('entry_search.html', {}, context_instance=RequestContext(request))
+search = permission_required('entries.can_add', login_url='/admin/')(search)

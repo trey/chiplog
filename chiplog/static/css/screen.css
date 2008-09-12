@@ -115,7 +115,8 @@ body {
   clear: both;
   background: #e8e8e8;
   color: #878787; }
-  .paginated #main {
+  .paginated #main,
+  .search #main {
     border-top: 10px solid #ccc; }
   #main h1 {
     font-size: 20px;
@@ -296,3 +297,14 @@ body {
     color: darkred;
     text-transform: uppercase;
     list-style-type: none; }
+
+/* ---------- site/search.sass ---------- */
+.search #main h1 {
+  padding-top: 20px;
+  color: #565656;
+  font-size: 25px;
+  text-align: center; }
+.search #message {
+  margin: 10px 20px;
+  text-align: center;
+  font-size: 18px; }
