@@ -22,6 +22,19 @@ $(document).ready(function() {
 		$('#search div label').hide();
 	}
 
+	// Hide and show search form
+	$('#search form').hide();
+	$('#search').append('<a href="#">Search</a>');
+	$('#search a').click(function() {
+		$('#search form').toggle('fast');
+		if ($(this).html() == 'Search') {
+			$(this).html('Close Search');
+		} else {
+			$(this).html('Search');
+		};
+		return false;
+	});
+
 	// Timeago: http://timeago.yarp.com/
 	// $('abbr[class*=timeago]').timeago();
 
