@@ -1,8 +1,9 @@
 from django.contrib import admin
-from chiplog.admin import EntryAdmin
-from chiplog.model import Entry
+from models import Entry
 
-class AdminSite(admin.AdminSite):
-    pass
+class EntryAdmin(admin.ModelAdmin):
+    list_display = ('body', 'created', 'tags')
+    list_filter   = ('created', 'updated', 'tags')
+    search_fields = ('body',)
 
-site = AdminSite()
+admin.site.register(Entry, EntryAdmin)

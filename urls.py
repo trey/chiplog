@@ -1,23 +1,32 @@
-from django.conf import settings
 from django.conf.urls.defaults import *
-from django.contrib import admin
-
-admin.autodiscover()
+from chiplog import views
 
 urlpatterns = patterns('',
-    (r'^chiplog/', include('chiplog.urls')),
+    url(r'^$',
+        view=views.entry_list,
+        name='chiplog_index'),
 
-    (r'^admin/doc/', include('django.contrib.admindocs.urls')),
-    (r'^admin/(.*)', admin.site.root),
+    url(r'^(?P<object_id>\d+)/$',
+        view=views.entry_detail,
+        name='chiplog_detail'),
+
+    url(r'^page/(?P<page>\d+)/$',
+        view=views.entry_list,
+        name='chiplog_index_paginated'),
+
+    url(r'^new/$',
+        view=views.entry_create,
+        name='chiplog_create'),
+
+    url(r'^edit/(?P<object_id>\d+)/$',
+        view=views.entry_update,
+        name='chiplog_update'),
+
+    url(r'^delete/(?P<object_id>\d+)/$',
+        view=views.entry_delete,
+        name='chiplog_delete'),
+
+    url (r'^search/$',
+        view=views.search,
+        name='entry_search'),
 )
-
-# This allows Django to serve static files when you're developing your project.
-# You'll have to do something else in production.
-# More information: http://www.djangoproject.com/documentation/static_files/
-# -----------------------------------------------------------------------------
-if settings.DEBUG:
-    urlpatterns += patterns("django.views",
-        url(r"^static/(?P<path>.*)", "static.serve", {
-            "document_root": settings.MEDIA_ROOT,
-        })
-    )
