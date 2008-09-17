@@ -44,7 +44,7 @@
 			<div class="meta">
 				<span class="delete"><a href="/chiplog/delete/{{ entry.id }}/">&otimes;</a></span>
 				<span class="date">
-					<a href="/chiplog/{{ entry.id }}/">
+					<a href="{{ entry.get_absolute_url }}">
 						{{ entry.created|date:"g:i a" }}
 					</a>
 				</span>
