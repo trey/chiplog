@@ -17,7 +17,7 @@
 		{{ form.tags }}
 	</div>
 	<div class="button">
-		<a href="/chiplog/">Cancel</a>
+		<a href="{% url chiplog_index %}">Cancel</a>
 	{% if object %}
 		<input type="submit" value="ReLog It">
 	{% else %}

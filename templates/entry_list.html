@@ -6,7 +6,7 @@
 
 {% block search %}
 <div id="search">
-	<form action="/chiplog/search/" method="get" accept-charset="utf-8">
+	<form action="{% url entry_search %}" method="get" accept-charset="utf-8">
 		<div><label for="s">Search</label><input type="text" value="" name="s" id="s" /></div>
 	</form>
 </div><!-- #search -->
@@ -15,7 +15,7 @@
 {% block header %}
 	{% if has_previous %}
 	<div id="add">
-		<a href="/chiplog/">New Entry</a>
+		<a href="{% url chiplog_index %}">New Entry</a>
 	</div><!-- #add -->
 	{% endif %}
 {% endblock %}
@@ -42,7 +42,7 @@
 		{% ifchanged %}<h2>{{ entry.created|naturalday:"l, F j, Y"|title }}</h2>{% endifchanged %}
 		<div class="entry">
 			<div class="meta">
-				<span class="delete"><a href="/chiplog/delete/{{ entry.id }}/">&otimes;</a></span>
+				<span class="delete"><a href="{% url chiplog_delete entry.id %}">&otimes;</a></span>
 				<span class="date">
 					<a href="{{ entry.get_absolute_url }}">
 						{{ entry.created|date:"g:i a" }}
@@ -63,10 +63,10 @@
 <div id="nav">
 {% if is_paginated %}
   {% if has_next %}
-  <a class="older" href="/chiplog/page/{{ next }}/">Older</a>
+  <a class="older" href="{% url chiplog_index_paginated next %}">Older</a>
   {% endif %}
   {% if has_previous %}
-  <a class="newer" href="/chiplog/page/{{ previous }}/">Newer</a>
+  <a class="newer" href="{% url chiplog_index_paginated previous %}/">Newer</a>
   {% endif %}
 {% else %}
 <div class="empty_nav"></div>

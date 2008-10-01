@@ -6,7 +6,7 @@
 
 {% block search %}
 <div id="search">
-	<form action="/chiplog/search/" method="get" accept-charset="utf-8">
+	<form action="{% url entry_search %}" method="get" accept-charset="utf-8">
 		<div><label for="s">Search</label><input type="text" value="{{ search_term }}" name="s" id="s" /></div>
 	</form>
 </div><!-- #search -->
@@ -14,7 +14,7 @@
 
 {% block header %}
 <div id="add">
-	<a href="/chiplog/">New Entry</a>
+	<a href="{% url chiplog_index %}">New Entry</a>
 </div><!-- #add -->
 {% endblock %}
 
@@ -26,7 +26,7 @@
 		{% ifchanged %}<h2>{{ entry.created|naturalday:"l, F j, Y"|title }}</h2>{% endifchanged %}
 		<div class="entry">
 			<div class="meta">
-				<span class="delete"><a href="/chiplog/delete/{{ entry.id }}/">&otimes;</a></span>
+				<span class="delete"><a href="{% url chiplog_delete entry.id %}">&otimes;</a></span>
 				<span class="date">
 					<a href="{{ entry.get_absolute_url }}">
 						{{ entry.created|date:"g:i a" }}

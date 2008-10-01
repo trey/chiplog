@@ -8,7 +8,7 @@
 <h1><strong>{{ object.created|date:"l, F j, Y" }}</strong> at <strong>{{ object.created|date:"g:i a" }}</strong></h1>
 <div class="entry">{{ object.body|markdown }}</div>
 
-<div id="edit"><a href="/chiplog/edit/{{ object.id }}/">Edit Entry</a></div>
+<div id="edit"><a href="{% url chiplog_update object.id %}">Edit Entry</a></div>
 {% if object.tags %}<div class="tags list">Tags: <span>{{ object.tags }}</span></div>{% endif %}
 
 {% endblock %}

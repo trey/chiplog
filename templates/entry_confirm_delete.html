@@ -10,7 +10,7 @@
 	<div class="entry">{{ object.body|markdown }}</div>
 	{% if object.tags %}<div class="tags list">Tags: <span>{{ object.tags }}</span></div>{% endif %}
 	<div class="button">
-		<a href="/chiplog/">Cancel</a>
+		<a href="{% url chiplog_index %}">Cancel</a>
 		<input type="submit" value="Delete Entry">
 	</div><!-- .button -->
 </form>
