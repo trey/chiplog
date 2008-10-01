@@ -10,8 +10,8 @@ class Entry(models.Model):
     A Chiplog Entry
     """
     body    = models.TextField(_('body'))
-    created = models.DateTimeField(auto_now_add=True, _('created'))
-    updated = models.DateTimeField(auto_now=True, _('updated'))
+    created = models.DateTimeField(_('created'), auto_now_add=True)
+    updated = models.DateTimeField( _('updated'), auto_now=True)
     tags    = TagField()
 
     class Meta:
