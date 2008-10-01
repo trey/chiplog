@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
 {% block class %} class="lone_form"{% endblock %}
 
 {% block content %}
 	
 {% if object %}
-<h1>Editing Entry from <strong>{{ object.created|date:"l, F j, Y" }}</strong> at <strong>{{ object.created|date:"g:i a" }}</strong></h1>
+<h1>{% trans "Editing Entry from" %} <strong>{{ object.created|date:"l, F j, Y" }}</strong> {% trans "at" %} <strong>{{ object.created|date:"g:i a" }}</strong></h1>
 {% endif %}
 <form action="." method="post">
 	<div>
@@ -17,11 +18,11 @@
 		{{ form.tags }}
 	</div>
 	<div class="button">
-		<a href="{% url chiplog_index %}">Cancel</a>
+		<a href="{% url chiplog_index %}">{% trans "Cancel" %}</a>
 	{% if object %}
-		<input type="submit" value="ReLog It">
+		<input type="submit" value="{% trans "ReLog It" %}">
 	{% else %}
-		<input type="submit" value="Log It">
+		<input type="submit" value="{% trans "Log It" %}">
 	{% endif %}
 	</div><!-- .button -->
 </form>

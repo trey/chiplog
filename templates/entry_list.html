@@ -1,13 +1,14 @@
 {% extends 'base.html' %}
 {% load markup %}
 {% load humanize %}
+{% load i18n %}
 
 {% block class %}{% if has_previous %} class="paginated"{% endif %}{% endblock %}
 
 {% block search %}
 <div id="search">
 	<form action="{% url entry_search %}" method="get" accept-charset="utf-8">
-		<div><label for="s">Search</label><input type="text" value="" name="s" id="s" /></div>
+		<div><label for="s">{% trans "Search" %}</label><input type="text" value="" name="s" id="s" /></div>
 	</form>
 </div><!-- #search -->
 {% endblock %}
@@ -15,7 +16,7 @@
 {% block header %}
 	{% if has_previous %}
 	<div id="add">
-		<a href="{% url chiplog_index %}">New Entry</a>
+		<a href="{% url chiplog_index %}">{% trans "New Entry" %}</a>
 	</div><!-- #add -->
 	{% endif %}
 {% endblock %}
@@ -33,7 +34,7 @@
 			{{ form.tags.errors }}
 			{{ form.tags }}
 		</div>
-		<div class="button"><input type="submit" value="Log It"></div>
+		<div class="button"><input type="submit" value="{% trans "Log It" %}"></div>
 	</form>
 {% endif %}
 
@@ -63,10 +64,10 @@
 <div id="nav">
 {% if is_paginated %}
   {% if has_next %}
-  <a class="older" href="{% url chiplog_index_paginated next %}">Older</a>
+  <a class="older" href="{% url chiplog_index_paginated next %}">{% trans "Older" %}</a>
   {% endif %}
   {% if has_previous %}
-  <a class="newer" href="{% url chiplog_index_paginated previous %}/">Newer</a>
+  <a class="newer" href="{% url chiplog_index_paginated previous %}/">{% trans "Newer" %}</a>
   {% endif %}
 {% else %}
 <div class="empty_nav"></div>

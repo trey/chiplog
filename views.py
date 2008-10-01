@@ -3,6 +3,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response, get_object_or_404
 from django.views.generic import date_based, list_detail, create_update
 from django.template import RequestContext
+from django.core.urlresolvers import reverse
 from chiplog.models import *
 from chiplog.forms import EntryForm
 
@@ -11,7 +12,7 @@ def entry_list(request, page=0):
         form = EntryForm(data=request.POST)
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect('/chiplog/')
+            return HttpResponseRedirect(reverse('chiplog_index'))
         else:
             return render_to_response('entry_form.html', {'form': form}, context_instance=RequestContext(request))
     else:

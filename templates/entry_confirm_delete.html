@@ -1,17 +1,18 @@
 {% extends 'base.html' %}
 {% load markup %}
+{% load i18n %}
 
 {% block class %} class="entry_delete"{% endblock %}
 
 {% block content %}	
 
-<h1>Deleting Entry from <strong>{{ object.created|date:"l, F j, Y" }}</strong> at <strong>{{ object.created|date:"g:i a" }}</strong></h1>
+<h1>{% trans "Deleting Entry from" %} <strong>{{ object.created|date:"l, F j, Y" }}</strong> at <strong>{{ object.created|date:"g:i a" }}</strong></h1>
 <form action="." method="post">
 	<div class="entry">{{ object.body|markdown }}</div>
-	{% if object.tags %}<div class="tags list">Tags: <span>{{ object.tags }}</span></div>{% endif %}
+	{% if object.tags %}<div class="tags list">{% trans "Tags:" %} <span>{{ object.tags }}</span></div>{% endif %}
 	<div class="button">
-		<a href="{% url chiplog_index %}">Cancel</a>
-		<input type="submit" value="Delete Entry">
+		<a href="{% url chiplog_index %}">{% trans "Cancel" %}</a>
+		<input type="submit" value="{% trans "Delete Entry" %}">
 	</div><!-- .button -->
 </form>
 {% endblock %}

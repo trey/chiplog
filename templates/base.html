@@ -1,6 +1,8 @@
+{% load i18n %}
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Chiplog{% block title %}{% endblock %}</title>
+<title>{% trans "Chiplog" %}{% block title %}{% endblock %}</title>
 <link rel="stylesheet" href="{{ MEDIA_URL }}chiplog/css/screen.css" type="text/css" media="screen">
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
 <script type="text/javascript">google.load("jquery", "1.2.6");</script>
