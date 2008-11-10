@@ -114,7 +114,7 @@ body {
   border-bottom: 10px solid #ccc;
   clear: both;
   background: #e8e8e8;
-  color: #878787; }
+  color: #565656; }
   .paginated #main,
   .search #main {
     border-top: 10px solid #ccc; }
@@ -145,7 +145,7 @@ body {
         font-size: 11px;
         color: #878787; }
         .entry_detail #main #edit a:hover {
-          color: inherit;
+          color: #878787;
           text-decoration: underline; }
   #main h1 {
     font-size: 20px;
@@ -163,6 +163,7 @@ body {
     padding: 5px 20px 7px;
     font-weight: normal;
     font-size: 16px;
+    color: #878787;
     border-bottom-width: 2px;
     border-bottom-style: solid;
     border-bottom-color: #bbbbbb; }
@@ -292,7 +293,7 @@ body {
     font-size: 11px;
     color: #878787; }
     #main form a:hover {
-      color: inherit;
+      color: #878787;
       text-decoration: underline; }
   #main form div {
     margin-bottom: 10px; }
