@@ -52,6 +52,7 @@
 			<div class="content">
 				{{ entry.body|markdown }}
 			</div><!-- .content -->
+			{% if entry.tags %}<div class="tags list">Tags: <span><a href="#">{{ entry.tags }}</a></span></div>{% endif %}
 		</div>
 	{% endfor %}
 </div><!-- #entries -->

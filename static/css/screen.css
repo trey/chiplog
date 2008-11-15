@@ -181,6 +181,12 @@ body {
         #main #entries .entry .delete a:hover {
           text-decoration: none;
           color: #821d13; }
+      #main #entries .entry .tags {
+        padding: 0 10px 5px;
+        font-size: 12px;
+        color: #878787; }
+        #main #entries .entry .tags span {
+          color: #565656; }
 
 #nav:after {
   content: ".";
