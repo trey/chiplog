@@ -176,6 +176,9 @@ body {
     margin: 20px 0; }
     #main #entries .entry {
       margin: 10px 20px; }
+      #main #entries .entry .edit {
+        font-size: 11px;
+        color: #878787; }
       #main #entries .entry .delete a {
         color: #823d36; }
         #main #entries .entry .delete a:hover {
