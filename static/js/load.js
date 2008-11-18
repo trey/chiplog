@@ -8,12 +8,13 @@ $(document).ready(function() {
 		$('#id_tags').hide();
 	};
 	$('.tags').not('.list').append('<a href="#">Add Tags</a>');
-	$('.tags a').click(function() {
+	$('.tags a').click(show_tag_field);
+	function show_tag_field() {
 		$('#id_tags').fadeIn();
 		$('#id_tags').focus();
-		$(this).hide();
+		$('.tags a').hide();
 		return false;
-	});
+	}
 
 	// Search form default text and reset on focus.
 	if($('#s').val() == "") {
@@ -25,31 +26,20 @@ $(document).ready(function() {
 	// Hide and show search form
 	$('#search form').hide();
 	$('#search').append('<a href="#">Search</a>');
-	$('#search a').click(function() {
+	function search_toggle () {
 		$('#search form').toggle('fast');
-		if ($(this).html() == 'Search') {
-			$(this).html('Close Search');
+		if ($('#search a').html() == 'Search') {
+			$('#search a').html('Close Search');
 			$('#s').focus();
 		} else {
-			$(this).html('Search');
+			$('#search a').html('Search');
 		};
 		return false;
-	});
+	}
+	$('#search a').click(search_toggle);
 
 	// Keyboard shortcuts
-    $(document).bind(
-		'keydown',
-		'Ctrl+s',
-		function() {
-			$('#search form').toggle('fast');
-			if ($('#search a').html() == 'Search') {
-				$('#search a').html('Close Search');
-				$('#s').focus();
-			} else {
-				$('#search a').html('Search');
-			};
-			return false;
-		}
-	);
+    $(document).bind('keydown', 'Ctrl+s', search_toggle);
+    $(document).bind('keydown', 'Ctrl+t', show_tag_field);
 
 });
