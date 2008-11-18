@@ -36,7 +36,20 @@ $(document).ready(function() {
 		return false;
 	});
 
-	// Timeago: http://timeago.yarp.com/
-	// $('abbr[class*=timeago]').timeago();
+	// Keyboard shortcuts
+    $(document).bind(
+		'keydown',
+		'Ctrl+s',
+		function() {
+			$('#search form').toggle('fast');
+			if ($('#search a').html() == 'Search') {
+				$('#search a').html('Close Search');
+				$('#s').focus();
+			} else {
+				$('#search a').html('Search');
+			};
+			return false;
+		}
+	);
 
 });
