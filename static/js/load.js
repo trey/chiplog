@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function() {
 
 	// Focus on the textarea right away.  You're here to write.
 	$('#id_body').focus();
