@@ -43,7 +43,6 @@
 		{% ifchanged %}<h2>{{ entry.created|naturalday:"l, F j, Y"|title }}</h2>{% endifchanged %}
 		<div class="entry">
 			<div class="meta">
-				<span class="delete"><a href="{% url chiplog_delete entry.id %}">&otimes;</a></span>
 				<span class="date">
 					<a href="{{ entry.get_absolute_url }}">
 						{{ entry.created|date:"g:i a" }}
