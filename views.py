@@ -17,7 +17,7 @@ def entry_list(request, page=0):
 			form.save()
 			return HttpResponseRedirect(reverse('chiplog_index'))
 		else:
-			return render_to_response('entry_form.html', {'form': form}, context_instance=RequestContext(request))
+			return render_to_response('entry_form.html', {'form': form, 'chiplog_media_url': settings.CHIPLOG_MEDIA_URL})
 	else:
 		return list_detail.object_list(
 			request,
