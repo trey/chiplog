@@ -70,6 +70,7 @@ def entry_update(request, object_id):
 		model = Entry,
 		template_name = 'entry_form.html',
 		post_save_redirect = reverse('chiplog_index'),
+		template_object_name = 'entry',
 		extra_context = { 'chiplog_media_url': settings.CHIPLOG_MEDIA_URL }
 	)
 

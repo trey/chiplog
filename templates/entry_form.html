@@ -4,9 +4,9 @@
 {% block class %} class="lone_form"{% endblock %}
 
 {% block content %}
-	
-{% if object %}
-<h1>{% trans "Editing Entry from" %} <strong>{{ object.created|date:"l, F j, Y" }}</strong> {% trans "at" %} <strong>{{ object.created|date:"g:i a" }}</strong></h1>
+
+{% if entry %}
+<h1>{% trans "Editing Entry from" %} <strong>{{ entry.created|date:"l, F j, Y" }}</strong> {% trans "at" %} <strong>{{ entry.created|date:"g:i a" }}</strong></h1>
 {% endif %}
 <form action="." method="post">
 	<div>
