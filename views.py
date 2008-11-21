@@ -36,6 +36,7 @@ def entry_detail(request, object_id):
 		object_id = object_id,
 		queryset = Entry.objects.all(),
 		template_name = 'entry_detail.html',
+		template_object_name = 'entry',
 		extra_context = { 'chiplog_media_url': settings.CHIPLOG_MEDIA_URL }
 	)
 
@@ -47,6 +48,7 @@ def entry_delete(request, object_id):
 		model = Entry,
 		template_name = 'entry_confirm_delete.html',
 		post_delete_redirect = reverse('chiplog_index'),
+		template_object_name = 'entry',
 		extra_context = { 'chiplog_media_url': settings.CHIPLOG_MEDIA_URL }
 	)
 
