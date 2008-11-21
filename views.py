@@ -69,9 +69,9 @@ def entry_update(request, object_id):
 		object_id = object_id,
 		model = Entry,
 		template_name = 'entry_form.html',
-		post_save_redirect = reverse('chiplog_index'),
+		# post_save_redirect = request.POST['referrer'],
 		template_object_name = 'entry',
-		extra_context = { 'chiplog_media_url': settings.CHIPLOG_MEDIA_URL }
+		extra_context = { 'chiplog_media_url': settings.CHIPLOG_MEDIA_URL, 'referrer': request.META['HTTP_REFERER'] }
 	)
 
 @permission_required('entries.can_add')

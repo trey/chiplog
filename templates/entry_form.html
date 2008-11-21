@@ -10,6 +10,7 @@
 {% endif %}
 <form action="." method="post">
 	<div>
+		<input type="hidden" name="referrer" value="{{ referrer }}" id="referrer">
 		{{ form.body.errors }}
 		{{ form.body }}
 	</div>
