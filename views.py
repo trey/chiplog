@@ -49,7 +49,7 @@ def entry_delete(request, object_id):
 		template_name = 'entry_confirm_delete.html',
 		post_delete_redirect = reverse('chiplog_index'),
 		template_object_name = 'entry',
-		extra_context = { 'chiplog_media_url': settings.CHIPLOG_MEDIA_URL }
+		extra_context = { 'chiplog_media_url': settings.CHIPLOG_MEDIA_URL, 'referrer': request.META['HTTP_REFERER']  }
 	)
 
 @permission_required('entries.can_add')

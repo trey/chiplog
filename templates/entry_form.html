@@ -19,7 +19,7 @@
 		{{ form.tags }}
 	</div>
 	<div class="button">
-		<a href="{% url chiplog_index %}">{% trans "Cancel" %}</a>
+		<a href="{{ referrer }}">{% trans "Cancel" %}</a>
 	{% if object %}
 		<input type="submit" value="{% trans "ReLog It" %}">
 	{% else %}
