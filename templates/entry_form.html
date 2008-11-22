@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load i18n %}
 
+{% block title %}{% if entry %}: Editing Entry{% else %}: Creating Entry{% endif %}{% endblock %}
 {% block class %} class="lone_form"{% endblock %}
 
 {% block content %}
