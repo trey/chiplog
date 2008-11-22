@@ -92,6 +92,9 @@ body {
   -moz-border-radius: 13px;
   -webkit-border-radius: 13px;
   background: #565656; }
+  .entry_delete#wrapper {
+    color: #821d13;
+    background: #823d36; }
 
 #header {
   padding: 5px 19px 5px 20px; }
@@ -295,6 +298,8 @@ body {
   padding-bottom: 0;
   border-bottom: 10px solid #ccc;
   background: #565656; }
+  .entry_delete #main form {
+    background: #823d36; }
   #main form textarea,
   #main form .tags input {
     color: #565656;
@@ -306,6 +311,8 @@ body {
     #main form a:hover {
       color: #878787;
       text-decoration: underline; }
+    .entry_delete #main form a {
+      color: #222222; }
   #main form div {
     margin-bottom: 10px; }
     #main form div.tags,
