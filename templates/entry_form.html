@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load i18n %}
 
-{% block title %}{% if entry %}: Editing Entry{% else %}: Creating Entry{% endif %}{% endblock %}
+{% block title %}{% if entry %}: Editing Entry from {{ entry.created|date:"l, F j, Y" }} at {{ entry.created|date:"g:i a" }}{% else %}: Creating Entry{% endif %}{% endblock %}
 {% block class %} class="lone_form"{% endblock %}
 
 {% block content %}

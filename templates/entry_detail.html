@@ -2,6 +2,7 @@
 {% load markup %}
 {% load i18n %}
 
+{% block title %}: {{ entry.created|date:"l, F j, Y" }} at {{ entry.created|date:"g:i a" }}{% endblock %}
 {% block class %} class="entry_detail"{% endblock %}
 
 {% block content %}	
