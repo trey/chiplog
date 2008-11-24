@@ -26,7 +26,11 @@ urlpatterns = patterns('',
         view=views.entry_delete,
         name='chiplog_delete'),
 
-    url (r'^search/$',
+    url(r'^search/$',
         view=views.search,
         name='entry_search'),
+
+    url(r'^tagged/(?P<tag>\w+)$',
+        view=views.tagged_list,
+        name='chiplog_tagged_list'),
 )

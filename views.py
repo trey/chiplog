@@ -30,6 +30,13 @@ def entry_list(request, page=0):
 		)
 
 @permission_required('entries.can_add')
+def tagged_list(request, tag):
+    """
+    All entries for a particular tag.
+    """
+    pass
+
+@permission_required('entries.can_add')
 def entry_detail(request, object_id):
 	return list_detail.object_detail(
 		request,
