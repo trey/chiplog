@@ -7,12 +7,12 @@ $(function() {
 	if ($('#id_tags').val() == "") {
 		$('#id_tags').hide();
 	};
-	$('.tags').not('.list').append('<a href="#">Add Tags</a>');
-	$('.tags a').click(show_tag_field);
+	$('form .tags').append('<a href="#">Add Tags</a>');
+	$('form .tags a').click(show_tag_field);
 	function show_tag_field() {
 		$('#id_tags').fadeIn();
 		$('#id_tags').focus();
-		$('.tags a').hide();
+		$('form .tags a').hide();
 		return false;
 	}
 
