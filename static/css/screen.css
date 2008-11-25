@@ -347,11 +347,13 @@ body {
     list-style-type: none; }
 
 /* ---------- site/search.sass ---------- */
+.tagged #main h1,
 .search #main h1 {
   padding-top: 20px;
   color: #565656;
   font-size: 25px;
   text-align: center; }
+.tagged #message,
 .search #message {
   margin: 10px 20px;
   text-align: center;

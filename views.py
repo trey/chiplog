@@ -11,6 +11,9 @@ from chiplog import settings
 
 @permission_required('entries.can_add')
 def entry_list(request, page=0):
+    """
+    Dual-purpose view: add new Entries / view paginated list of Entires.
+    """
     if request.POST:
         form = EntryForm(data=request.POST)
         if form.is_valid():
@@ -37,9 +40,9 @@ def tagged_list(request, tag):
     return list_detail.object_list(
         request,
         queryset = Entry.objects.filter(tags__icontains=tag),
-        template_name = 'entry_list.html',
+        template_name = 'entry_tagged.html',
         template_object_name = 'entry',
-        extra_context = { 'chiplog_media_url': settings.CHIPLOG_MEDIA_URL }
+        extra_context = { 'tag': tag, 'chiplog_media_url': settings.CHIPLOG_MEDIA_URL }
     )
 
 @permission_required('entries.can_add')
