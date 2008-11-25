@@ -2,6 +2,7 @@
 {% load markup %}
 {% load humanize %}
 {% load i18n %}
+{% load tagging_tags %}
 
 {% block title %}: {% trans "Entries tagged with" %} &lsquo;{{ tag }}&rsquo;{% endblock %}
 {% block class %} class="tagged"{% endblock %}
@@ -38,7 +39,17 @@
 			<div class="content">
 				{{ entry.body|markdown }}
 			</div><!-- .content -->
-		</div>
+			{% if entry.tags %}
+			<div class="tags list">Tags:
+				<span>
+					{% tags_for_object entry as tag_list %}
+					{% for tag in tag_list %}
+					<a href="{% url chiplog_index %}tagged/{{ tag }}">{{ tag }}</a>
+					{% endfor %}
+				</span>
+			</div><!-- .tags .list -->
+			{% endif %}
+		</div><!-- .entry -->
 	{% endfor %}
 </div><!-- #entries -->
 {% endblock %}
