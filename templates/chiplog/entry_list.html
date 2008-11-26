@@ -1,41 +1,55 @@
-{% extends 'base.html' %}
+{% extends 'chiplog/base.html' %}
 {% load markup %}
 {% load humanize %}
 {% load i18n %}
 {% load tagging_tags %}
 
-{% block title %}: {% trans "Entries tagged with" %} &lsquo;{{ tag }}&rsquo;{% endblock %}
-{% block class %} class="tagged"{% endblock %}
+{% block class %}{% if has_previous %} class="paginated"{% endif %}{% endblock %}
 
 {% block search %}
 <div id="search">
 	<form action="{% url entry_search %}" method="get" accept-charset="utf-8">
-		<div><label for="s">{% trans "Search" %}</label><input type="text" value="{{ search_term }}" name="s" id="s" /></div>
+		<div><label for="s">{% trans "Search" %}</label><input type="text" value="" name="s" id="s" /></div>
 	</form>
 </div><!-- #search -->
 {% endblock %}
 
 {% block header %}
-<div id="add">
-	<a href="{% url chiplog_index %}">{% trans "New Entry" %}</a>
-</div><!-- #add -->
+	{% if has_previous %}
+	<div id="add">
+		<a href="{% url chiplog_index %}">{% trans "New Entry" %}</a>
+	</div><!-- #add -->
+	{% endif %}
 {% endblock %}
 
 {% block content %}	
-<h1>{% trans "Entries tagged with" %} &lsquo;{{ tag }}&rsquo;</h1>
-{% if message %}<div id="message">{{ message }}</div>{% endif %}
+
+{% if has_previous %}
+{% else %}
+	<form action="." method="post">
+		<div>
+			{{ form.body.errors }}
+			{{ form.body }}
+		</div>
+		<div class="tags">
+			{{ form.tags.errors }}
+			{{ form.tags }}
+		</div>
+		<div class="button"><input type="submit" value="{% trans "Log It" %}"></div>
+	</form>
+{% endif %}
+
 <div id="entries">
 	{% for entry in entry_list %}
 		{% ifchanged %}<h2>{{ entry.created|naturalday:"l, F j, Y"|title }}</h2>{% endifchanged %}
 		<div class="entry">
 			<div class="meta">
-				<span class="delete"><a href="{% url chiplog_delete entry.id %}">&otimes;</a></span>
 				<span class="date">
 					<a href="{{ entry.get_absolute_url }}">
 						{{ entry.created|date:"g:i a" }}
 					</a>
+					<span class="edit"> / <a href="{% url chiplog_update entry.id %}">Edit</a></span>
 				</span>
-				<span class="edit"> / <a href="{% url chiplog_update entry.id %}">Edit</a></span>
 			</div>
 			<div class="content">
 				{{ entry.body|markdown }}
@@ -57,6 +71,15 @@
 
 {% block navigation %}
 <div id="nav">
+{% if is_paginated %}
+  {% if has_next %}
+  <a class="older" href="{% url chiplog_index_paginated next %}">{% trans "Older" %}</a>
+  {% endif %}
+  {% if has_previous %}
+  <a class="newer" href="{% url chiplog_index_paginated previous %}/">{% trans "Newer" %}</a>
+  {% endif %}
+{% else %}
 <div class="empty_nav"></div>
+{% endif %}
 </div><!-- #nav -->
 {% endblock %}
