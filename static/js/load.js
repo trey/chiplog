@@ -7,7 +7,7 @@ $(function() {
 	if ($('#id_tags').val() == "") {
 		$('#id_tags').hide();
 	};
-	$('form .tags').not('.entry_delete form .tags').append('<a href="#">Add Tags</a>');
+	$('form .tags').not('.list').append('<a href="#">Add Tags</a>');
 	$('form .tags a').click(show_tag_field);
 	function show_tag_field() {
 		$('#id_tags').fadeIn();
