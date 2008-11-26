@@ -21,7 +21,7 @@
 	<span>
 		{% tags_for_object entry as tag_list %}
 		{% for tag in tag_list %}
-		<a href="{% url chiplog_index %}tagged/{{ tag }}">{{ tag }}</a>
+		<a href="{% url chiplog_tagged_list tag.name %}">{{ tag }}</a>
 		{% endfor %}
 	</span>
 </div><!-- .tags .list -->
