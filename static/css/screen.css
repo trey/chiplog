@@ -119,7 +119,8 @@ body {
   background: #e8e8e8;
   color: #565656; }
   .paginated #main,
-  .search #main {
+  .search #main,
+  .tagged #main {
     border-top: 10px solid #ccc; }
   .entry_detail #main {
     padding-bottom: 10px;
