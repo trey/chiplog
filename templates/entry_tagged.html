@@ -35,6 +35,7 @@
 						{{ entry.created|date:"g:i a" }}
 					</a>
 				</span>
+				<span class="edit"> / <a href="{% url chiplog_update entry.id %}">Edit</a></span>
 			</div>
 			<div class="content">
 				{{ entry.body|markdown }}
