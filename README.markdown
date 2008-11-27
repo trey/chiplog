@@ -6,7 +6,28 @@ The name is taking things back to [where the word "Log" came from in the first p
 
 Requirements
 
-* [Django Tagging](http://code.google.com/p/django-tagging/)
-* Django Markup (django.contrib.markup)
-* Django Humanize (django.contrib.humanize)
-* [Python Markdown](http://err.no/pymarkdown/pymarkdown.py)
+- [Django Tagging](http://code.google.com/p/django-tagging/)
+- Django Markup (django.contrib.markup)
+- Django Humanize (django.contrib.humanize)
+- [Python Markdown](http://err.no/pymarkdown/pymarkdown.py)
+
+---
+
+**Installation**
+
+In `settings.py`, add to `INSTALLED_APPS`:
+
+	'chiplog',
+	'tagging',
+	'django.contrib.markup',
+	'django.contrib.humanize',
+
+In `urls.py`:
+
+	urlpatterns = patterns('',
+	    (r'^[whatever_you_want]/', include('chiplog.urls')),
+
+Add a symbolic link to the Chiplog media folder inside your project's media folder. Something like:
+
+	cd /path/to/your/project/media
+	ln -s /path/to/chiplog/static chiplog
