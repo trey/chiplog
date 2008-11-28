@@ -12,7 +12,7 @@
 	<div class="entry">{{ entry.body|markdown }}</div>
 	{% if entry.tags %}<div class="tags list">{% trans "Tags:" %} <span>{{ entry.tags }}</span></div>{% endif %}
 	<div class="button">
-		<a href="{{ referrer }}">{% trans "Cancel" %}</a>
+		<a href="{{ entry.get_absolute_url }}">{% trans "Cancel" %}</a>
 		<input type="submit" value="{% trans "Delete Entry" %}">
 	</div><!-- .button -->
 </form>

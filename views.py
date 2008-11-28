@@ -62,7 +62,7 @@ def entry_delete(request, object_id):
         model = Entry,
         post_delete_redirect = reverse('chiplog_index'),
         template_object_name = 'entry',
-        extra_context = { 'chiplog_media_url': settings.CHIPLOG_MEDIA_URL, 'referrer': request.META['HTTP_REFERER'] }
+        extra_context = { 'chiplog_media_url': settings.CHIPLOG_MEDIA_URL }
     )
 
 @login_required
@@ -82,7 +82,7 @@ def entry_update(request, object_id):
         model = Entry,
         # post_save_redirect = request.POST['referrer'],
         template_object_name = 'entry',
-        extra_context = { 'chiplog_media_url': settings.CHIPLOG_MEDIA_URL, 'referrer': request.META['HTTP_REFERER'] }
+        extra_context = { 'chiplog_media_url': settings.CHIPLOG_MEDIA_URL }
     )
 
 @login_required

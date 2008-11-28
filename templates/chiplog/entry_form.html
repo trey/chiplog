@@ -20,10 +20,11 @@
 		{{ form.tags }}
 	</div>
 	<div class="button">
-		<a href="{{ referrer }}">{% trans "Cancel" %}</a>
 	{% if entry %}
+		<a href="{{ entry.get_absolute_url }}">{% trans "Cancel" %}</a>
 		<input type="submit" value="{% trans "ReLog It" %}">
 	{% else %}
+		<a href="{% url chiplog_index %}">{% trans "Cancel" %}</a>
 		<input type="submit" value="{% trans "Log It" %}">
 	{% endif %}
 	</div><!-- .button -->
