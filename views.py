@@ -1,4 +1,4 @@
-from django.contrib.auth.decorators import permission_required
+from django.contrib.auth.decorators import permission_required, login_required
 from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response, get_object_or_404
 from django.views.generic import date_based, list_detail, create_update
@@ -9,7 +9,7 @@ from chiplog.models import Entry
 from chiplog.forms import EntryForm
 from chiplog import settings
 
-@permission_required('entries.can_add')
+@login_required
 def entry_list(request, page=0):
     """
     Dual-purpose view: add new Entries / view paginated list of Entires.
@@ -31,7 +31,7 @@ def entry_list(request, page=0):
             extra_context = { 'form': EntryForm, 'chiplog_media_url': settings.CHIPLOG_MEDIA_URL }
         )
 
-@permission_required('entries.can_add')
+@login_required
 def tagged_list(request, tag):
     """
     All entries for a particular tag.
@@ -44,7 +44,7 @@ def tagged_list(request, tag):
         extra_context = { 'tag': tag, 'chiplog_media_url': settings.CHIPLOG_MEDIA_URL }
     )
 
-@permission_required('entries.can_add')
+@login_required
 def entry_detail(request, object_id):
     return list_detail.object_detail(
         request,
@@ -54,7 +54,7 @@ def entry_detail(request, object_id):
         extra_context = { 'chiplog_media_url': settings.CHIPLOG_MEDIA_URL }
     )
 
-@permission_required('entries.can_delete')
+@login_required
 def entry_delete(request, object_id):
     return create_update.delete_object(
         request,
@@ -65,7 +65,7 @@ def entry_delete(request, object_id):
         extra_context = { 'chiplog_media_url': settings.CHIPLOG_MEDIA_URL, 'referrer': request.META['HTTP_REFERER'] }
     )
 
-@permission_required('entries.can_add')
+@login_required
 def entry_create(request):
     return create_update.create_object(
         request,
@@ -74,7 +74,7 @@ def entry_create(request):
         extra_context = { 'chiplog_media_url': settings.CHIPLOG_MEDIA_URL }
     )
 
-@permission_required('entries.can_update')
+@login_required
 def entry_update(request, object_id):
     return create_update.update_object(
         request,
@@ -85,7 +85,7 @@ def entry_update(request, object_id):
         extra_context = { 'chiplog_media_url': settings.CHIPLOG_MEDIA_URL, 'referrer': request.META['HTTP_REFERER'] }
     )
 
-@permission_required('entries.can_add')
+@login_required
 def search(request):
     if request.GET:
         search_term = '%s' % request.GET['s']
