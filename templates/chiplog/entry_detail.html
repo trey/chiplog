@@ -12,8 +12,8 @@
 <div class="entry">{{ entry.body|markdown }}</div>
 
 <div id="edit">
-	<a title="Edit this entry" href="{% url chiplog_update entry.id %}">{% trans "Edit" %}</a> / 
-	<a title="Delete this entry" href="{% url chiplog_delete entry.id %}">&otimes;</a>
+	<a title="{% trans 'Edit this entry' %}" href="{% url chiplog_update entry.id %}">{% trans 'Edit' %}</a> / 
+	<a title="{% trans 'Delete this entry' %}" href="{% url chiplog_delete entry.id %}">&otimes;</a>
 </div>
 {% if entry.tags %}
 <div class="tags list">
@@ -27,4 +27,15 @@
 </div><!-- .tags .list -->
 {% endif %}
 
+{% endblock %}
+
+{% block navigation %}
+<div id="nav">
+	{% if entry.get_previous_by_created %}
+	<a class="older" href="{{ entry.get_previous_by_created.get_absolute_url }}">{% trans 'Previous' %}</a>
+	{% endif %}
+	{% if entry.get_next_by_created %}
+	<a class="newer" href="{{ entry.get_next_by_created.get_absolute_url }}">{% trans 'Next' %}</a>
+	{% endif %}
+</div><!-- #nav -->
 {% endblock %}
