@@ -77,7 +77,7 @@
   <a class="older" href="{% url chiplog_index_paginated next %}">{% trans "Older" %}</a>
   {% endif %}
   {% if has_previous %}
-  <a class="newer" href="{% url chiplog_index_paginated previous %}/">{% trans "Newer" %}</a>
+  <a class="newer" href="{% url chiplog_index_paginated previous %}">{% trans "Newer" %}</a>
   {% endif %}
 {% else %}
 <div class="empty_nav"></div>
