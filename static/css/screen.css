@@ -139,6 +139,10 @@ body {
       margin: 10px 0 0 20px;
       padding: 10px 0;
       color: #878787; }
+      .entry_detail #main .tags a {
+        color: #e8e8e8; }
+        .entry_detail #main .tags a:hover {
+          text-decoration: underline; }
       .entry_detail #main .tags span {
         color: #e8e8e8; }
     .entry_detail #main #edit {
