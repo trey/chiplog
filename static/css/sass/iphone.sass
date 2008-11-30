@@ -34,8 +34,11 @@ body
     
     .tags
       :display none
-    .button input
-      :font-size 18px
+    .button
+      +floatclear
+      input
+        :float right
+        :font-size 18px
 
   .entry
     :margin 3px 0
@@ -49,7 +52,7 @@ body
     :color = !mid_gray
     a
       :color = !mid_gray
-  
+
   #nav
     +floatclear
     a
