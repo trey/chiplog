@@ -12,64 +12,99 @@ body
   :font 14px "Gill Sans", Helvetica, sans-serif
   :background = !body_bg
 
-  #wrapper
-    :padding 5px 8px
+a
+  :color = !blue
 
-  h1, h2
-    :margin 10px 0
+#wrapper
+  :padding 5px 8px
+
+h1, h2, #add a
+  :margin 10px 0
+  :color = !mid_gray
+
+h1
+  :color = !almost_white
+  .entry_detail &
     :color = !mid_gray
 
-  #search
-    :display none
-
-  form
-    textarea
-      :padding 2%
-      :width 96%
-      :border 1px solid #ccc
-      :font-size 15px
-      :line-height 18px
-      :color #333
-      :-webkit-border-radius 6px
-    
-    .tags
-      :display none
-    .button
-      +floatclear
-      input
-        :float right
-        :font-size 18px
-
-  .entry
-    :margin 3px 0
-    :padding 10px
-    :-webkit-border-radius 6px
-    :background = !almost_white
-    
-  .entry_detail #edit,
-  .entry_detail .tags
-    :padding 5px 0
-    :color = !mid_gray
-    a
+#add
+  :text-align center
+  a
+    :display block
+    :margin 5px 100px
+    :padding 3px 5px
+    :color = !dark_gray
+    :background
       :color = !mid_gray
+    :-webkit-border-radius 5px
 
-  #nav
+
+h1
+  strong
+    :text-decoration underline
+
+#search
+  :display none
+
+form
+  textarea
+    :padding 2%
+    :width 96%
+    :border 1px solid #ccc
+    :font-size 15px
+    :line-height 18px
+    :color #333
+    :-webkit-border-radius 6px
+  
+  .tags
+    a
+      :display none
+    .lone_form &
+      :display block
+      :float left
+  .button
+    :width 140px
+    :float right
     +floatclear
     a
       :float left
-      :margin 8px 0 0
-      :padding 5px 14px
-      :font-size 16px
-      :color #838383
-      :text-transform uppercase
-      :background #c0c0c0
-      :-moz-border-radius 5px
-      :-webkit-border-radius 5px
-      &.older
-        :float right
-      &:hover
-        :color #777
-        :background #ccc
-      &:active
-        :position relative
-        :top 1px
+      :margin-top 7px
+    input
+      :float right
+      :font-size 15px
+
+.entry
+  :margin 3px 0
+  :padding 10px
+  :-webkit-border-radius 6px
+  :background = !almost_white
+  
+  a
+    :color = !blue
+  
+.entry_detail
+  #edit,
+  .tags
+    :padding 5px 0
+    :color = !mid_gray
+
+#nav
+  +floatclear
+  a
+    :float left
+    :margin 8px 0 0
+    :padding 5px 14px
+    :font-size 16px
+    :color #838383
+    :text-transform uppercase
+    :background #c0c0c0
+    :-moz-border-radius 5px
+    :-webkit-border-radius 5px
+    &.older
+      :float right
+    &:hover
+      :color #777
+      :background #ccc
+    &:active
+      :position relative
+      :top 1px
