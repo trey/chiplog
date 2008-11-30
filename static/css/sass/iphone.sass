@@ -1,5 +1,6 @@
 @import base/reset.sass
 @import base/copy.sass
+@import site/colors.sass
 
 /* ---------- iphone.sass ----------
 
@@ -7,4 +8,36 @@ html
   :-webkit-text-size-adjust none
 
 body
-  :color red
+  :font 14px "Gill Sans", Helvetica, sans-serif
+  :background = !body_bg
+
+  #wrapper
+    :padding 5px 3px
+
+  h1, h2
+    :margin 10px 0
+    :color = !mid_gray
+
+  #search
+    :display none
+
+  form
+    textarea
+      :padding 2%
+      :width 96%
+      :border 1px solid #ccc
+      :font-size 15px
+      :line-height 18px
+      :color #333
+      :-webkit-border-radius 6px
+    
+    .tags
+      :display none
+    .button input
+      :font-size 18px
+
+  .entry
+    :margin 3px 0
+    :padding 10px
+    :-webkit-border-radius 6px
+    :background = !almost_white
