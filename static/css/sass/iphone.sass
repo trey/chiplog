@@ -1,5 +1,6 @@
 @import base/reset.sass
 @import base/copy.sass
+@import base/shortcuts.sass
 @import site/colors.sass
 
 /* ---------- iphone.sass ----------
@@ -41,3 +42,31 @@ body
     :padding 10px
     :-webkit-border-radius 6px
     :background = !almost_white
+    
+  .entry_detail #edit,
+  .entry_detail .tags
+    :padding 5px 0
+    :color = !mid_gray
+    a
+      :color = !mid_gray
+  
+  #nav
+    +floatclear
+    a
+      :float left
+      :margin 8px 0 0
+      :padding 5px 14px
+      :font-size 16px
+      :color #838383
+      :text-transform uppercase
+      :background #c0c0c0
+      :-moz-border-radius 5px
+      :-webkit-border-radius 5px
+      &.older
+        :float right
+      &:hover
+        :color #777
+        :background #ccc
+      &:active
+        :position relative
+        :top 1px
