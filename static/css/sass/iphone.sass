@@ -24,7 +24,9 @@ h1, h2, #add a
 
 h1
   :color = !almost_white
-  .entry_detail &
+  .entry_detail &,
+  .lone_form &,
+  .entry_delete &
     :color = !mid_gray
 
 #add
@@ -57,21 +59,29 @@ form
     :-webkit-border-radius 6px
   
   .tags
+    :float left
+    :margin-top 11px
+    
     a
-      :display none
-    .lone_form &
-      :display block
-      :float left
+      :margin-top 5px
+    
+    input
+      :width 100px
+      :margin-top -8px
+      :padding 3px
+
   .button
-    :width 140px
+    :margin-top 5px
+    :width 58%
     :float right
-    +floatclear
+    :text-align right
     a
-      :float left
       :margin-top 7px
     input
-      :float right
       :font-size 15px
+
+#entries
+  :clear both
 
 .entry
   :margin 3px 0
@@ -108,3 +118,6 @@ form
     &:active
       :position relative
       :top 1px
+
+pre code
+  :font-size 14px
