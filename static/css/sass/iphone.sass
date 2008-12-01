@@ -61,14 +61,17 @@ form
   .tags
     :float left
     :margin-top 11px
+    :position relative
     
     a
       :margin-top 5px
     
     input
+      :position absolute
+      :top -5px
       :width 100px
-      :margin-top -8px
       :padding 3px
+      :font-size 14px
 
   .button
     :margin-top 5px
@@ -99,6 +102,7 @@ form
     :color = !mid_gray
 
 #nav
+  :clear both
   +floatclear
   a
     :float left
