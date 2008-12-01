@@ -38,7 +38,7 @@ Run `./manage.py syncdb` from the root of your project, and you should be ready 
 
 **Optional**
 
-If you don't already have something configured, you can add a login template from [chiplog_proj](http://github.com/trey/chiplog_proj).
+If you don't already have something configured, you can add a login template from [the example Chiplog project](http://github.com/trey/chiplog_proj).
 
 Copy [`templates/registration/`](http://github.com/trey/chiplog_proj/tree/master/templates/registration) to your project's template folder.
 
