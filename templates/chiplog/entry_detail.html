@@ -6,6 +6,12 @@
 {% block title %}: {{ entry.created|date:"l, F j, Y" }} at {{ entry.created|date:"g:i a" }}{% endblock %}
 {% block class %} class="entry_detail"{% endblock %}
 
+{% block header %}
+	<div id="add">
+		<a href="{% url chiplog_index %}">{% trans "New Entry" %}</a>
+	</div><!-- #add -->
+{% endblock %}
+
 {% block content %}	
 
 <h1><strong>{{ entry.created|date:"l, F j, Y" }}</strong> at <strong>{{ entry.created|date:"g:i a" }}</strong></h1>
