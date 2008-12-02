@@ -12,11 +12,17 @@ body
   :font 14px "Gill Sans", Helvetica, sans-serif
   :background = !body_bg
 
+#main
+  :padding-top 3px
+
 a
   :color = !blue
 
 #wrapper
   :padding 5px 8px
+
+#entries
+  :padding-top 3px
 
 h1, h2, #add a
   :margin 10px 0
@@ -24,9 +30,7 @@ h1, h2, #add a
 
 h1
   :color = !almost_white
-  .entry_detail &,
-  .lone_form &,
-  .entry_delete &
+  .entry_detail &
     :color = !mid_gray
 
   .lone_form &
@@ -51,7 +55,7 @@ h1
     :text-decoration underline
 
 #search
-  :display none
+//  :display none
 
 form
   textarea
@@ -135,3 +139,26 @@ form
 
 pre code
   :font-size 14px
+
+// Search Form
+#search
+  +floatclear
+  :padding 3px 0
+  :text-align center
+  :background #191919
+  a
+    :padding 3px 10px
+    :color = !mid_gray
+    :text-transform uppercase
+    :font-size 11px
+  form
+    :padding 30px 0 20px
+
+    input[type=text]
+      :padding 3px 7px
+      :font-size 25px
+      :width 200px
+      :color #888
+      :border 1px solid #ccc
+      :-moz-border-radius 5px
+      :-webkit-border-radius 5px

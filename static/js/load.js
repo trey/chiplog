@@ -42,4 +42,14 @@ $(function() {
     $(document).bind('keydown', 'Ctrl+s', search_toggle);
     $(document).bind('keydown', 'Ctrl+t', show_tag_field);
 
+	// iPhone
+	// --------------------------------------------
+
+	// Detect User Agent (http://www.askdavetaylor.com/detect_apple_iphone_user_web_site_server.html)
+	var agent=navigator.userAgent.toLowerCase();
+	var is_iphone = ((agent.indexOf('iphone')!=-1));
+	if (is_iphone) {
+		$.scrollTo('#main');
+	}
+	
 });
