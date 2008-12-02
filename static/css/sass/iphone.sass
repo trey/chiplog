@@ -29,6 +29,12 @@ h1
   .entry_delete &
     :color = !mid_gray
 
+  .lone_form &
+    :color = !yellow
+
+  .entry_delete &
+    :color = !red
+
 #add
   :text-align center
   a
@@ -39,7 +45,6 @@ h1
     :background
       :color = !mid_gray
     :-webkit-border-radius 5px
-
 
 h1
   strong
@@ -91,11 +96,16 @@ form
   :padding 10px
   :-webkit-border-radius 6px
   :background = !almost_white
-  
+
+  .entry_delete &
+    :color #000
+    :background = !red
+
   a
     :color = !blue
   
-.entry_detail
+.entry_detail,
+.entry_delete
   #edit,
   .tags
     :padding 5px 0
