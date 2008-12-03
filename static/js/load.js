@@ -51,5 +51,5 @@ $(function() {
 	if (is_iphone) {
 		$.scrollTo('#main');
 	}
-	
+
 });
