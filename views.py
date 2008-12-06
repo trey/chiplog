@@ -4,10 +4,10 @@ from django.shortcuts import render_to_response, get_object_or_404
 from django.views.generic import date_based, list_detail, create_update
 from django.template import RequestContext
 from django.core.urlresolvers import reverse
+from django.conf import settings
 
 from chiplog.models import Entry
 from chiplog.forms import EntryForm
-from chiplog import settings
 
 @login_required
 def entry_list(request, page=0):
