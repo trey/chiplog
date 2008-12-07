@@ -22,7 +22,11 @@ In `settings.py`, add to `INSTALLED_APPS`:
 	'django.contrib.markup',
 	'django.contrib.humanize',
 
-Also in `settings.py`, add the following setting:
+Again in `settings.py` add the following to `MIDDLEWARE_CLASSES`:
+
+	'chiplog.middlewear.RailsFlash.Flash',
+
+Once again in `settings.py`, add the following setting:
 
 	CHIPLOG_MEDIA_URL = MEDIA_URL + 'chiplog/'
 
