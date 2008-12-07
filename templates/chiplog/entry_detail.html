@@ -15,6 +15,15 @@
 {% block content %}	
 
 <h1><strong>{{ entry.created|date:"l, F j, Y" }}</strong> at <strong>{{ entry.created|date:"g:i a" }}</strong></h1>
+
+{% if messages %}
+<ul class="message">
+    {% for message in messages %}
+    <li>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
 <div class="entry">{{ entry.body|markdown }}</div>
 
 <div id="edit">

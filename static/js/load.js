@@ -37,6 +37,8 @@ $(function() {
 		return false;
 	}
 	$('#search a').click(search_toggle);
+	
+	// $('.message').animate({ backgroundColor: '#FED078' }, "slow").animate({ opacity: "hide" }, 2500)
 
 	// Keyboard shortcuts
     $(document).bind('keydown', 'Ctrl+s', search_toggle);

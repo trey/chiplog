@@ -18,6 +18,7 @@ def entry_list(request, page=0):
         form = EntryForm(data=request.POST)
         if form.is_valid():
             form.save()
+            # request.user.message_set.create(message="Entry created.")
             return HttpResponseRedirect(reverse('chiplog_index'))
         else:
             return render_to_response('chiplog/entry_form.html', {'form': form, 'chiplog_media_url': settings.CHIPLOG_MEDIA_URL})
@@ -82,7 +83,7 @@ def entry_update(request, object_id):
         model = Entry,
         # post_save_redirect = request.POST['referrer'],
         template_object_name = 'entry',
-        extra_context = { 'chiplog_media_url': settings.CHIPLOG_MEDIA_URL }
+        extra_context = { 'chiplog_media_url': settings.CHIPLOG_MEDIA_URL },
     )
 
 @login_required

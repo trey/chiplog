@@ -40,6 +40,14 @@
 	</form>
 {% endif %}
 
+{% if messages %}
+<ul class="message">
+    {% for message in messages %}
+    <li>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
 <div id="entries">
 	{% for entry in entry_list %}
 		{% ifchanged %}<h2>{{ entry.created|naturalday:"l, F j, Y"|title }}</h2>{% endifchanged %}
