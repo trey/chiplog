@@ -15,6 +15,15 @@ body
 #main
   :padding-top 3px
 
+  .message
+    :clear both
+    :margin 20px 0
+    :padding 3px 0
+    :background = !yellow
+    li
+      :margin-left 10px
+      :list-style none
+
 a
   :color = !blue
 
@@ -66,7 +75,11 @@ form
     :line-height 18px
     :color #333
     :-webkit-border-radius 6px
-  
+
+  .tags,
+  .button
+    :margin-bottom 10px
+
   .tags
     :float left
     :margin-top 11px
