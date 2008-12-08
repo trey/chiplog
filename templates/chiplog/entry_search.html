@@ -4,13 +4,13 @@
 {% load i18n %}
 {% load tagging_tags %}
 
-{% block title %}: {% trans "Search results for" %} &lsquo;{{ search_term }}&rsquo;{% endblock %}
+{% block title %}: {% trans "Search results for" %} &lsquo;{{ query }}&rsquo;{% endblock %}
 {% block class %} class="search"{% endblock %}
 
 {% block search %}
 <div id="search">
 	<form action="{% url entry_search %}" method="get" accept-charset="utf-8">
-		<div><label for="s">{% trans "Search" %}</label><input type="text" value="{{ search_term }}" name="s" id="s" /></div>
+		<div><label for="q">{% trans "Search" %}</label><input type="text" value="{{ query }}" name="q" id="q" /></div>
 	</form>
 </div><!-- #search -->
 {% endblock %}
@@ -22,7 +22,7 @@
 {% endblock %}
 
 {% block content %}	
-<h1>{% trans "Search results for" %} &lsquo;{{ search_term }}&rsquo;</h1>
+<h1>{% trans "Search results for" %} &lsquo;{{ query }}&rsquo;</h1>
 {% if message %}<div id="message">{{ message }}</div>{% endif %}
 <div id="entries">
 	{% for entry in entry_list %}

@@ -17,8 +17,8 @@ $(function() {
 	}
 
 	// Search form default text and reset on focus.
-	if($('#s').val() == "") {
-		$('#s').toggleVal({ populateFrom: 'label', removeLabels: true });
+	if($('#q').val() == "") {
+		$('#q').toggleVal({ populateFrom: 'label', removeLabels: true });
 	} else {
 		$('#search div label').hide();
 	}
@@ -30,7 +30,7 @@ $(function() {
 		$('#search form').toggle('fast');
 		if ($('#search a').html() == 'Search') {
 			$('#search a').html('Close Search');
-			$('#s').focus();
+			$('#q').focus();
 		} else {
 			$('#search a').html('Search');
 		};

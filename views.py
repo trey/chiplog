@@ -89,10 +89,10 @@ def entry_update(request, object_id):
 @login_required
 def search(request):
     if request.GET:
-        search_term = '%s' % request.GET['s']
-        if len(search_term) != 0:
-            entry_list = Entry.objects.filter(body__icontains=search_term)
-            context = { 'entry_list': entry_list, 'search_term':search_term, 'chiplog_media_url': settings.CHIPLOG_MEDIA_URL }
+        query = request.GET['q']
+        if len(query) != 0:
+            entry_list = Entry.objects.filter(body__icontains=query)
+            context = { 'entry_list': entry_list, 'query':query, 'chiplog_media_url': settings.CHIPLOG_MEDIA_URL }
             return render_to_response('chiplog/entry_search.html', context, context_instance=RequestContext(request))
         else:
             message = 'Search term was too vague. Please try again.'
