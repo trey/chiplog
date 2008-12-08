@@ -89,7 +89,13 @@ def entry_update(request, object_id):
 @login_required
 def search(request):
     if request.GET:
-        query = request.GET['q']
+        try:
+            query = request.GET['q']
+        except KeyError:
+            # If they use the wrong query string (?s instead of ?q).
+            message = 'Something has gone wrong, champ. Try again.'
+            context = { 'message':message, 'chiplog_media_url': settings.CHIPLOG_MEDIA_URL }
+            return render_to_response('chiplog/entry_search.html', context, context_instance=RequestContext(request))
         if len(query) != 0:
             entry_list = Entry.objects.filter(body__icontains=query)
             context = { 'entry_list': entry_list, 'query':query, 'chiplog_media_url': settings.CHIPLOG_MEDIA_URL }
