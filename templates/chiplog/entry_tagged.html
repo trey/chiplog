@@ -10,7 +10,7 @@
 {% block search %}
 <div id="search">
 	<form action="{% url entry_search %}" method="get" accept-charset="utf-8">
-		<div><label for="s">{% trans "Search" %}</label><input type="text" value="{{ search_term }}" name="s" id="s" /></div>
+		<div><label for="q">{% trans "Search" %}</label><input type="text" value="{{ query }}" name="q" id="q" /></div>
 	</form>
 </div><!-- #search -->
 {% endblock %}
