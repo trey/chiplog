@@ -15,15 +15,20 @@ body
 #main
   :padding-top 3px
 
-  .message
+  .message,
+  .errorlist
     :clear both
     :margin 10px 0
     :padding 3px 0
-    :background = !yellow
     :-webkit-border-radius 3px
     li
       :margin-left 10px
       :list-style none
+
+  .message
+    :background = !yellow
+  .errorlist
+    :background = !red
 
 a
   :color = !blue
