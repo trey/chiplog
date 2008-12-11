@@ -2,4 +2,4 @@
 	- Is there a better way? Smarter use of inherited templates?
 - J-K jQuery navigation
 - search should have two listing results -entries, -tags
-- shine on bottom of text like [here](http://blog.cocoia.com/ "Cocoia Blog")
+- shine on bottom of text like [here](http://www.realmacsoftware.com/littlesnapper/)
