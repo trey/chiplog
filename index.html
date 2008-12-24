@@ -10,7 +10,7 @@
 	<style type="text/css">
 		body {
   		margin-top: 1.0em;
-  		background-color: #b00474;
+  		background-color: #272727;
 		  font-family: "helvetica"; 
   		color: #ffffff;
     }
@@ -49,74 +49,67 @@
       <span class="small">by <a href="http://github.com/trey">trey</a></small></h1>
 
     <div class="description">
-      Simple personal journal application written in Django (né Logbook)
+      A personal journal application written in Django.  You need this.
     </div>
 
     <h2>Dependencies</h2>
-<p>- [Django Tagging](http://code.google.com/p/django-tagging/)
-- Django Markup (django.contrib.markup)
-- Django Humanize (django.contrib.humanize)
-- [Python Markdown](http://err.no/pymarkdown/pymarkdown.py)
-
-</p>
+	<ul>
+		<li><a href="http://code.google.com/p/django-tagging/">Django Tagging</a></li>
+		<li>Django Markup (django.contrib.markup)</li>
+		<li>Django Humanize (django.contrib.humanize)</li>
+		<li><a href="http://err.no/pymarkdown/pymarkdown.py">Python Markdown</a></li>
+	</ul>
 <h2>Install</h2>
-<p>In `settings.py`, add to `INSTALLED_APPS`:
-
-	'chiplog',
-	'tagging',
-	'django.contrib.markup',
-	'django.contrib.humanize',
-
-Also in `settings.py`, add the following setting:
-
-	CHIPLOG_MEDIA_URL = MEDIA_URL + 'chiplog/'
-
-In `urls.py`:
-
-	urlpatterns = patterns('',
-	    (r'^[whatever_you_want]/', include('chiplog.urls')),
-
-Add a symbolic link to the Chiplog media folder inside your project's media folder. Something like:
-
-	cd /path/to/your/project/media
-	ln -s /path/to/chiplog/static chiplog
-
-Run `./manage.py syncdb` from the root of your project, and you should be ready to start Chiplogging.
-
----
-
-**Optional**
-
-If you don't already have something configured, you can add a login template from [the example Chiplog project](http://github.com/trey/chiplog_proj).
-
-Copy [`templates/registration/`](http://github.com/trey/chiplog_proj/tree/master/templates/registration) to your project's template folder.
-
-Add to `urls.py`:
-
-	(r'^accounts/login/$', 'django.contrib.auth.views.login'),
+<p>
+<p>In <code>settings.py</code>, add to <code>INSTALLED_APPS</code>:</p>
+<pre><code>'chiplog',
+'tagging',
+'django.contrib.markup',
+'django.contrib.humanize',
+</code></pre>
+<p>Also in <code>settings.py</code>, add the following setting:</p>
+<pre><code>CHIPLOG_MEDIA_URL = MEDIA_URL + 'chiplog/'
+</code></pre>
+<p>In <code>urls.py</code>:</p>
+<pre><code>urlpatterns = patterns('',
+    (r'^[whatever_you_want]/', include('chiplog.urls')),
+</code></pre>
+<p>Add a symbolic link to the Chiplog media folder inside your project&#8217;s media folder. Something like:</p>
+<pre><code>cd /path/to/your/project/media
+ln -s /path/to/chiplog/static chiplog
+</code></pre>
+<p>Run <code>./manage.py syncdb</code> from the root of your project, and you should be ready to start Chiplogging.</p>
+<h2>Optional</h2>
+<p>If you don&#8217;t already have something configured, you can add a login template from <a href="http://github.com/trey/chiplog_proj">the example Chiplog project</a>.</p>
+<p>Copy <a href="http://github.com/trey/chiplog_proj/tree/master/templates/registration"><code>templates/registration/</code></a> to your project&#8217;s template folder.</p>
+<p>Add to <code>urls.py</code>:</p>
+<pre><code>(r'^accounts/login/$', 'django.contrib.auth.views.login'),
+</code></pre>
 </p>
 <h2>License</h2>
 <p>MIT</p>
 <h2>Authors</h2>
-<p>Trey Piepmeier<br/>Myles Braithwaite</p>
+<ul>
+<li><a href="http://github.com/trey">Trey Piepmeier</a></li>
+<li><a href="http://github.com/myles">Myles Braithwaite</a></li>
+</ul>
 
-
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="http://github.com/trey/chiplog/zipball/master">zip</a> or
-      <a href="http://github.com/trey/chiplog/tarball/master">tar</a> formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/trey/chiplog</pre>
-    </p>
-      
-    <div class="footer">
-      get the source code on GitHub : <a href="http://github.com/trey/chiplog">trey/chiplog</a>
-    </div>
+<h2>Download</h2>
+<p>
+  You can download this project in either
+  <a href="http://github.com/trey/chiplog/zipball/master">zip</a> or
+  <a href="http://github.com/trey/chiplog/tarball/master">tar</a> formats.
+</p>
+<p>You can also clone the project with <a href="http://git-scm.com">Git</a>
+  by running:
+  <pre>$ git clone git://github.com/trey/chiplog</pre>
+</p>
+  
+<div class="footer">
+  get the source code on GitHub : <a href="http://github.com/trey/chiplog">trey/chiplog</a>
+</div>
     
-  </div>
+</div>
 
   
 </body>
