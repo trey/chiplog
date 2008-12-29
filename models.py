@@ -13,15 +13,15 @@ class Entry(models.Model):
     created = models.DateTimeField(_('created'), auto_now_add=True)
     updated = models.DateTimeField( _('updated'), auto_now=True)
     tags    = TagField()
-
+    
     class Meta:
         verbose_name = _('entry')
         verbose_name_plural = _('entries')
         ordering = ['-created']
-
+    
     def __unicode__(self):
         return self.body
-
+    
     @models.permalink
     def get_absolute_url(self):
         return ('chiplog_detail', [str(self.id)])
