@@ -22,6 +22,6 @@ class Entry(models.Model):
     def __unicode__(self):
         return self.body
 
+    @models.permalink
     def get_absolute_url(self):
         return ('chiplog_detail', [str(self.id)])
-    get_absolute_url = permalink(get_absolute_url)
