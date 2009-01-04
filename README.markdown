@@ -7,8 +7,8 @@ The name is taking things back to [where the word "Log" came from in the first p
 Requirements
 
 - [Django Tagging](http://code.google.com/p/django-tagging/)
-- Django Markup (django.contrib.markup)
-- Django Humanize (django.contrib.humanize)
+- [Django Markup](http://docs.djangoproject.com/en/dev/ref/contrib/#markup) (django.contrib.markup)
+- [Django Humanize](http://docs.djangoproject.com/en/dev/ref/contrib/humanize/) (django.contrib.humanize)
 - [Python Markdown](http://err.no/pymarkdown/pymarkdown.py)
 
 ---
