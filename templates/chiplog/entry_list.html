@@ -40,13 +40,7 @@
 	</form>
 {% endif %}
 
-{% if messages %}
-<ul class="message">
-    {% for message in messages %}
-    <li>{{ message }}</li>
-    {% endfor %}
-</ul>
-{% endif %}
+{% include 'chiplog/message.html' %}
 
 <div id="entries">
 	{% for entry in entry_list %}
