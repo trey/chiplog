@@ -1,0 +1,6 @@
+{% load i18n %}
+<div id="search">
+	<form action="{% url entry_search %}" method="get" accept-charset="utf-8">
+		<div><label for="q">{% trans "Search" %}</label><input type="text" value="{% if query %}{{ query }}{% endif %}" name="q" id="q" /></div>
+	</form>
+</div><!-- #search -->
