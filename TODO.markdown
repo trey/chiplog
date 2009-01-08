@@ -1,3 +1,5 @@
+- Automatically log if the Entry was made with a desktop browser or iPhone.
+	- new field (`from`?)
 - J-K jQuery navigation
 - search should have two listing results -entries, -tags
 - shine on bottom of text like [here](http://www.realmacsoftware.com/littlesnapper/)
