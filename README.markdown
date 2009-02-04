@@ -10,6 +10,7 @@ Requirements
 - [Django Markup](http://docs.djangoproject.com/en/dev/ref/contrib/#markup) (django.contrib.markup)
 - [Django Humanize](http://docs.djangoproject.com/en/dev/ref/contrib/humanize/) (django.contrib.humanize)
 - [Python Markdown](http://err.no/pymarkdown/pymarkdown.py)
+- [Typogrify](http://typogrify.googlecode.com/)
 
 ---
 
@@ -19,6 +20,7 @@ In `settings.py`, add to `INSTALLED_APPS`:
 
 	'chiplog',
 	'tagging',
+	'typogrify',
 	'django.contrib.markup',
 	'django.contrib.humanize',
 
