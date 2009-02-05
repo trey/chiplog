@@ -31,14 +31,14 @@
 					<a href="{{ entry.get_absolute_url }}">
 						{{ entry.created|date:"g:i a" }}
 					</a>
-					<span class="edit"> / <a href="{% url chiplog_update entry.id %}">Edit</a></span>
+					<span class="edit"> / <a href="{% url chiplog_update entry.id %}">{% trans "Edit" %}</a></span>
 				</span>
 			</div>
 			<div class="content">
 				{{ entry.body|markdown|typogrify|autolink }}
 			</div><!-- .content -->
 			{% if entry.tags %}
-			<div class="tags list">Tags:
+			<div class="tags list">{% trans "Tags" %}:
 				<span>
 					{% tags_for_object entry as tag_list %}
 					{% for tag in tag_list %}

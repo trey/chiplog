@@ -5,7 +5,7 @@
 {% load typogrify %}
 {% load autolink %}
 
-{% block title %}: {{ entry.created|date:"l, F j, Y" }} at {{ entry.created|date:"g:i a" }}{% endblock %}
+{% block title %}: {{ entry.created|date:"l, F j, Y" }} {% trans "at" %} {{ entry.created|date:"g:i a" }}{% endblock %}
 {% block class %} class="entry_detail"{% endblock %}
 
 {% block header %}
@@ -16,7 +16,7 @@
 
 {% block content %}	
 
-<h1><strong>{{ entry.created|date:"l, F j, Y" }}</strong> at <strong>{{ entry.created|date:"g:i a" }}</strong></h1>
+<h1><strong>{{ entry.created|date:"l, F j, Y" }}</strong> {% trans "at" %} <strong>{{ entry.created|date:"g:i a" }}</strong></h1>
 
 {% include 'chiplog/message.html' %}
 
@@ -28,7 +28,7 @@
 </div>
 {% if entry.tags %}
 <div class="tags list">
-	{% trans "Tags:" %}
+	{% trans "Tags" %}:
 	<span>
 		{% tags_for_object entry as tag_list %}
 		{% for tag in tag_list %}
