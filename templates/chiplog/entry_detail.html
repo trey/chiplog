@@ -2,6 +2,8 @@
 {% load markup %}
 {% load i18n %}
 {% load tagging_tags %}
+{% load typogrify %}
+{% load autolink %}
 
 {% block title %}: {{ entry.created|date:"l, F j, Y" }} at {{ entry.created|date:"g:i a" }}{% endblock %}
 {% block class %} class="entry_detail"{% endblock %}
@@ -18,7 +20,7 @@
 
 {% include 'chiplog/message.html' %}
 
-<div class="entry">{{ entry.body|markdown }}</div>
+<div class="entry">{{ entry.body|markdown|typogrify|autolink }}</div>
 
 <div id="edit">
 	<a title="{% trans 'Edit this entry' %}" href="{% url chiplog_update entry.id %}">{% trans 'Edit' %}</a> / 

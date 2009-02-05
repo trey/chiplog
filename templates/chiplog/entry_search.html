@@ -3,6 +3,8 @@
 {% load humanize %}
 {% load i18n %}
 {% load tagging_tags %}
+{% load typogrify %}
+{% load autolink %}
 
 {% block title %}: {% trans "Search results for" %} &lsquo;{{ query }}&rsquo;{% endblock %}
 {% block class %} class="search"{% endblock %}
@@ -33,7 +35,7 @@
 				</span>
 			</div>
 			<div class="content">
-				{{ entry.body|markdown }}
+				{{ entry.body|markdown|typogrify|autolink }}
 			</div><!-- .content -->
 			{% if entry.tags %}
 			<div class="tags list">Tags:
