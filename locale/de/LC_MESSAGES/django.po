@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-02-05 14:36+0100\n"
-"PO-Revision-Date: 2009-02-05 14:45+0100\n"
+"POT-Creation-Date: 2009-02-05 15:52+0100\n"
+"PO-Revision-Date: 2009-02-05 15:55+0100\n"
 "Last-Translator: Stefan Imhoff <kogakure@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -46,10 +46,38 @@ msgstr "Lösche Eintrag von"
 #: templates/chiplog/entry_confirm_delete.html:10
 #: templates/chiplog/entry_detail.html:8
 #: templates/chiplog/entry_detail.html:19
+#: templates/chiplog/entry_detail.html:46
+#: templates/chiplog/entry_detail.html:49 
+#: templates/chiplog/entry_form.html:4
+#: templates/chiplog/entry_form.html:10 
+#: templates/chiplog/entry_list.html:45
+#: templates/chiplog/entry_search.html:27
+#: templates/chiplog/entry_tagged.html:31
+msgid "l, F j, Y"
+msgstr "l, j. F Y"
+
+#: templates/chiplog/entry_confirm_delete.html:5
+#: templates/chiplog/entry_confirm_delete.html:10
+#: templates/chiplog/entry_detail.html:8
+#: templates/chiplog/entry_detail.html:19
 #: templates/chiplog/entry_form.html:4
 #: templates/chiplog/entry_form.html:10
 msgid "at"
 msgstr "um"
+
+#: templates/chiplog/entry_confirm_delete.html:5
+#: templates/chiplog/entry_confirm_delete.html:10
+#: templates/chiplog/entry_detail.html:8
+#: templates/chiplog/entry_detail.html:19
+#: templates/chiplog/entry_detail.html:46
+#: templates/chiplog/entry_detail.html:49
+#: templates/chiplog/entry_form.html:4
+#: templates/chiplog/entry_form.html:10 
+#: templates/chiplog/entry_list.html:50
+#: templates/chiplog/entry_search.html:32
+#: templates/chiplog/entry_tagged.html:36
+msgid "g:i a"
+msgstr "H:i"
 
 #: templates/chiplog/entry_confirm_delete.html:13
 #: templates/chiplog/entry_detail.html:31 
@@ -60,7 +88,7 @@ msgid "Tags"
 msgstr "Schlagworte"
 
 #: templates/chiplog/entry_confirm_delete.html:15
-#: templates/chiplog/entry_form.html:24
+#: templates/chiplog/entry_form.html:24 
 #: templates/chiplog/entry_form.html:27
 msgid "Cancel"
 msgstr "Abbrechen"
@@ -80,7 +108,7 @@ msgstr "Neuer Eintrag"
 msgid "Edit this entry"
 msgstr "Bearbeite diesen Eintrag"
 
-#: templates/chiplog/entry_detail.html:26
+#: templates/chiplog/entry_detail.html:26 
 #: templates/chiplog/entry_list.html:52
 #: templates/chiplog/entry_search.html:34
 #: templates/chiplog/entry_tagged.html:39
@@ -99,7 +127,7 @@ msgstr "Vorherige"
 msgid "Next"
 msgstr "Nächste"
 
-#: templates/chiplog/entry_form.html:4
+#: templates/chiplog/entry_form.html:4 
 #: templates/chiplog/entry_form.html:10
 msgid "Editing Entry from"
 msgstr "Eintrag bearbeiten von"
@@ -112,7 +140,8 @@ msgstr "Erstelle Eintrag"
 msgid "ReLog It"
 msgstr "Erneut loggen"
 
-#: templates/chiplog/entry_form.html:28 templates/chiplog/entry_list.html:37
+#: templates/chiplog/entry_form.html:28 
+#: templates/chiplog/entry_list.html:37
 msgid "Log It"
 msgstr "Loggen"
 
@@ -138,6 +167,7 @@ msgstr "Suchergebnisse für"
 msgid "Entries tagged with"
 msgstr "Einträge mit dem Schlagwort"
 
-#: templates/chiplog/entry_tagged.html:15 templates/chiplog/search.html:4
+#: templates/chiplog/entry_tagged.html:15
+#: templates/chiplog/search.html:4
 msgid "Search"
 msgstr "Suchen"

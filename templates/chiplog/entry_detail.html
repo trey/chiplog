@@ -5,7 +5,7 @@
 {% load typogrify %}
 {% load autolink %}
 
-{% block title %}: {{ entry.created|date:"l, F j, Y" }} {% trans "at" %} {{ entry.created|date:"g:i a" }}{% endblock %}
+{% block title %}: {{ entry.created|date:_("l, F j, Y") }} {% trans "at" %} {{ entry.created|date:_("g:i a") }}{% endblock %}
 {% block class %} class="entry_detail"{% endblock %}
 
 {% block header %}
@@ -16,7 +16,7 @@
 
 {% block content %}	
 
-<h1><strong>{{ entry.created|date:"l, F j, Y" }}</strong> {% trans "at" %} <strong>{{ entry.created|date:"g:i a" }}</strong></h1>
+<h1><strong>{{ entry.created|date:_("l, F j, Y") }}</strong> {% trans "at" %} <strong>{{ entry.created|date:_("g:i a") }}</strong></h1>
 
 {% include 'chiplog/message.html' %}
 
@@ -43,10 +43,10 @@
 {% block navigation %}
 <div id="nav">
 	{% if entry.get_previous_by_created %}
-	<a class="older" title="{{ entry.get_previous_by_created.created|date:"l, F j, Y" }} at {{ entry.get_previous_by_created.created|date:"g:i a" }}" href="{{ entry.get_previous_by_created.get_absolute_url }}">{% trans 'Previous' %}</a>
+	<a class="older" title="{{ entry.get_previous_by_created.created|date:_("l, F j, Y") }} at {{ entry.get_previous_by_created.created|date:_("g:i a") }}" href="{{ entry.get_previous_by_created.get_absolute_url }}">{% trans 'Previous' %}</a>
 	{% endif %}
 	{% if entry.get_next_by_created %}
-	<a class="newer" title="{{ entry.get_next_by_created.created|date:"l, F j, Y" }} at {{ entry.get_next_by_created.created|date:"g:i a" }}" href="{{ entry.get_next_by_created.get_absolute_url }}">{% trans 'Next' %}</a>
+	<a class="newer" title="{{ entry.get_next_by_created.created|date:_("l, F j, Y") }} at {{ entry.get_next_by_created.created|date:_("g:i a") }}" href="{{ entry.get_next_by_created.get_absolute_url }}">{% trans 'Next' %}</a>
 	{% endif %}
 </div><!-- #nav -->
 {% endblock %}

@@ -2,12 +2,12 @@
 {% load markup %}
 {% load i18n %}
 
-{% block title %}: {% trans "Deleting Entry from" %} {{ entry.created|date:"l, F j, Y" }} {% trans "at" %} {{ entry.created|date:"g:i a" }}{% endblock %}
+{% block title %}: {% trans "Deleting Entry from" %} {{ entry.created|date:_("l, F j, Y") }} {% trans "at" %} {{ entry.created|date:_("g:i a") }}{% endblock %}
 {% block class %} class="entry_delete"{% endblock %}
 
 {% block content %}	
 
-<h1>{% trans "Deleting Entry from" %} <strong>{{ entry.created|date:"l, F j, Y" }}</strong> {% trans "at" %} <strong>{{ entry.created|date:"g:i a" }}</strong></h1>
+<h1>{% trans "Deleting Entry from" %} <strong>{{ entry.created|date:_("l, F j, Y") }}</strong> {% trans "at" %} <strong>{{ entry.created|date:_("g:i a") }}</strong></h1>
 <form action="." method="post">
 	<div class="entry">{{ entry.body|markdown }}</div>
 	{% if entry.tags %}<div class="tags list">{% trans "Tags" %}: <span>{{ entry.tags }}</span></div>{% endif %}

@@ -1,13 +1,13 @@
 {% extends 'chiplog/base.html' %}
 {% load i18n %}
 
-{% block title %}{% if entry %}: {% trans "Editing Entry from" %} {{ entry.created|date:"l, F j, Y" }} {% trans "at" %} {{ entry.created|date:"g:i a" }}{% else %}: {% trans "Creating Entry" %}{% endif %}{% endblock %}
+{% block title %}{% if entry %}: {% trans "Editing Entry from" %} {{ entry.created|date:_("l, F j, Y") }} {% trans "at" %} {{ entry.created|date:_("g:i a") }}{% else %}: {% trans "Creating Entry" %}{% endif %}{% endblock %}
 {% block class %} class="lone_form"{% endblock %}
 
 {% block content %}
 
 {% if entry %}
-<h1>{% trans "Editing Entry from" %} <strong>{{ entry.created|date:"l, F j, Y" }}</strong> {% trans "at" %} <strong>{{ entry.created|date:"g:i a" }}</strong></h1>
+<h1>{% trans "Editing Entry from" %} <strong>{{ entry.created|date:_("l, F j, Y") }}</strong> {% trans "at" %} <strong>{{ entry.created|date:_("g:i a") }}</strong></h1>
 {% endif %}
 <form action="." method="post">
 	<div>
