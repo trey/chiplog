@@ -1,6 +1,8 @@
 - Fix auto-link behavior
 	- Don't link inside code blocks
 	- Don't link if the URL is already inside a link.
+- Date-based listings
+	- By day, week?, month, year
 - Automatically log if the Entry was made with a desktop browser or iPhone.
 	- new field (`from`?)
 - J-K jQuery navigation
