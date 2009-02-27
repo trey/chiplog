@@ -1,3 +1,5 @@
+- Adding a tag with dashes gives a server error:
+	- `NoReverseMatch: Reverse for 'treypiepmeier_com.chiplog_tagged_list' with arguments '(u'emma-survey',)' and keyword arguments '{}' not found.`
 - Fix auto-link behavior
 	- Don't link inside code blocks
 	- Don't link if the URL is already inside a link.
