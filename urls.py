@@ -1,7 +1,15 @@
 from django.conf.urls.defaults import *
 from chiplog import views
 
+js_info_dict = {
+    'packages': ('chiplog',),
+}
+
 urlpatterns = patterns('',
+    url(r'jsi18n/$',
+        view='django.views.i18n.javascript_catalog', 
+        kwargs=js_info_dict,
+        name="jsi18n_link"),
     url(r'^$',
         view=views.entry_list,
         name='chiplog_index'),

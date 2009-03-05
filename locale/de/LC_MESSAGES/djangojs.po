@@ -1,0 +1,26 @@
+# Chiplog German language files for JavaScript.
+# This file is distributed under the same license as the Chiplog package.
+# Stefan Imhoff <kogakure@gmail.com>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-03-05 18:10+0100\n"
+"PO-Revision-Date: 2009-03-05 18:10+0100\n"
+"Last-Translator: Stefan Imhoff <kogakure@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: static/js/load.js:8
+msgid "Add Tags"
+msgstr "Schlagworte hinzufügen"
+
+#: static/js/load.js:24 static/js/load.js.py:27 static/js/load.js.py:31
+msgid "Search"
+msgstr "Suche"
+
+#: static/js/load.js:28
+msgid "Close Search"
+msgstr "Suche schließen"
