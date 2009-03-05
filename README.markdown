@@ -28,6 +28,13 @@ Also in `settings.py`, add the following setting:
 
 	CHIPLOG_MEDIA_URL = MEDIA_URL + 'chiplog/'
 
+And add at the context processor of chiplog:
+
+    TEMPLATE_CONTEXT_PROCESSORS = (
+        'chiplog.context_processors.chiplog_media_url',
+        ...
+    )
+
 In `urls.py`:
 
 	urlpatterns = patterns('',

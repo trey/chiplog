@@ -21,7 +21,7 @@ def entry_list(request, page=0):
             # request.user.message_set.create(message="Entry created.")
             return HttpResponseRedirect(reverse('chiplog_index'))
         else:
-            return render_to_response('chiplog/entry_form.html', {'form': form, 'chiplog_media_url': settings.CHIPLOG_MEDIA_URL})
+            return render_to_response('chiplog/entry_form.html', {'form': form})
     else:
         return list_detail.object_list(
             request,
@@ -29,7 +29,7 @@ def entry_list(request, page=0):
             template_object_name = 'entry',
             paginate_by = 10,
             page = page,
-            extra_context = { 'form': EntryForm, 'chiplog_media_url': settings.CHIPLOG_MEDIA_URL }
+            extra_context = { 'form': EntryForm }
         )
 
 @login_required
@@ -42,7 +42,7 @@ def tagged_list(request, tag):
         queryset = Entry.objects.filter(tags__icontains=tag),
         template_name = 'chiplog/entry_tagged.html',
         template_object_name = 'entry',
-        extra_context = { 'tag': tag, 'chiplog_media_url': settings.CHIPLOG_MEDIA_URL }
+        extra_context = { 'tag': tag }
     )
 
 @login_required
@@ -51,8 +51,7 @@ def entry_detail(request, object_id):
         request,
         object_id = object_id,
         queryset = Entry.objects.all(),
-        template_object_name = 'entry',
-        extra_context = { 'chiplog_media_url': settings.CHIPLOG_MEDIA_URL }
+        template_object_name = 'entry'
     )
 
 @login_required
@@ -63,7 +62,6 @@ def entry_delete(request, object_id):
         model = Entry,
         post_delete_redirect = reverse('chiplog_index'),
         template_object_name = 'entry',
-        extra_context = { 'chiplog_media_url': settings.CHIPLOG_MEDIA_URL }
     )
 
 @login_required
@@ -72,7 +70,6 @@ def entry_create(request):
         request,
         model = Entry,
         post_save_redirect = reverse('chiplog_index'),
-        extra_context = { 'chiplog_media_url': settings.CHIPLOG_MEDIA_URL }
     )
 
 @login_required
@@ -83,7 +80,6 @@ def entry_update(request, object_id):
         model = Entry,
         # post_save_redirect = request.POST['referrer'],
         template_object_name = 'entry',
-        extra_context = { 'chiplog_media_url': settings.CHIPLOG_MEDIA_URL },
     )
 
 @login_required
@@ -94,15 +90,15 @@ def search(request):
         except KeyError:
             # If they use the wrong query string (?s instead of ?q).
             message = 'Something has gone wrong, champ. Try again.'
-            context = { 'message':message, 'chiplog_media_url': settings.CHIPLOG_MEDIA_URL }
+            context = { 'message':message }
             return render_to_response('chiplog/entry_search.html', context, context_instance=RequestContext(request))
         if len(query) != 0:
             entry_list = Entry.objects.filter(body__icontains=query)
-            context = { 'entry_list': entry_list, 'query':query, 'chiplog_media_url': settings.CHIPLOG_MEDIA_URL }
+            context = { 'entry_list': entry_list, 'query':query }
             return render_to_response('chiplog/entry_search.html', context, context_instance=RequestContext(request))
         else:
             message = 'Search term was too vague. Please try again.'
-            context = { 'message':message, 'chiplog_media_url': settings.CHIPLOG_MEDIA_URL }
+            context = { 'message':message }
             return render_to_response('chiplog/entry_search.html', context, context_instance=RequestContext(request))
     else:
-        return render_to_response('chiplog/entry_search.html', { 'chiplog_media_url': settings.CHIPLOG_MEDIA_URL }, context_instance=RequestContext(request))
+        return render_to_response('chiplog/entry_search.html', {}, context_instance=RequestContext(request))
