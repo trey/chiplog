@@ -7,7 +7,7 @@ $(function() {
 	if ($('#id_tags').val() == "") {
 		$('#id_tags').hide();
 	};
-	$('form .tags').not('.list').append('<a href="#">Add Tags</a>');
+	$('form .tags').not('.list').append('<a href="#">' + gettext('Add Tags') + '</a>');
 	$('form .tags a').click(show_tag_field);
 	function show_tag_field() {
 		$('#id_tags').fadeIn();
@@ -25,14 +25,14 @@ $(function() {
 
 	// Hide and show search form
 	$('#search form').hide();
-	$('#search').append('<a href="#">Search</a>');
+	$('#search').append('<a href="#">' + gettext('Search') + '</a>');
 	function search_toggle () {
 		$('#search form').toggle('fast');
-		if ($('#search a').html() == 'Search') {
-			$('#search a').html('Close Search');
+		if ($('#search a').html() == gettext('Search')) {
+			$('#search a').html(gettext('Close Search'));
 			$('#q').focus();
 		} else {
-			$('#search a').html('Search');
+			$('#search a').html(gettext('Search'));
 		};
 		return false;
 	}
