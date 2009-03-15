@@ -10,6 +10,7 @@ urlpatterns = patterns('',
         view='django.views.i18n.javascript_catalog', 
         kwargs=js_info_dict,
         name="jsi18n_link"),
+        
     url(r'^$',
         view=views.entry_list,
         name='chiplog_index'),
