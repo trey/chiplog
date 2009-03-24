@@ -1,6 +1,7 @@
 - Add search bar to permalink pages (should be everywhere)
 - Adding a tag with dashes gives a server error:
 	- `NoReverseMatch: Reverse for 'treypiepmeier_com.chiplog_tagged_list' with arguments '(u'emma-survey',)' and keyword arguments '{}' not found.`
+- Use [this](http://markitup.jaysalvat.com/home/) for adding and editing entries.
 - AppEngine version
 - Dashboard widget
 - Fix auto-link behavior
